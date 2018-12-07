@@ -1,10 +1,9 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en-nz">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yesterday In Space @*- @ViewData["Title"]*@</title>
-
+    <title>Yesterday, In Space - @ViewData["Title"]</title>
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -16,7 +15,25 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
-<body>
+<body class='@ViewData["Class"]'>
+	<header class="yis-header">
+		<a asp-page="/Index" class="yis-logo" title="Yesterday, In Space"></a>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+        	<div class="container">
+            	<div class="navbar-collapse collapse">
+                	<ul class="nav navbar-nav">
+                    	<li><a asp-page="/About">About</a></li>
+                    	<li><a asp-page="/Characters">Characters</a></li>
+                    	<li><a asp-page="/CastCrew">Cast &amp; Crew</a></li>
+                    	<li><a asp-page="/Gallery">Gallery</a></li>
+						<!--<li class="yis-social yis-fb"><a href="http://fb.me/yesterdayinspace"><span>Facebook</span></a></li>
+						<li class="yis-social yis-ig"><a href="http://www.instagram.com/yesterdayinspace"><span>Instagram</span></a></li>
+						<li class="yis-social yis-yt"><a href="http://goo.gl/hhLErK"><span>YouTube</span></a></li>-->
+                	</ul>
+            	</div>
+        	</div>
+    	</nav>
+	</header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -28,31 +45,44 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">Yesterday In Space</a>
+                <a asp-page="/Index" class="navbar-brand"></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
                     <li><a asp-page="/About">About</a></li>
                     <li><a asp-page="/Characters">Characters</a></li>
                     <li><a asp-page="/CastCrew">Cast &amp; Crew</a></li>
                     <li><a asp-page="/Gallery">Gallery</a></li>
                 </ul>
             </div>
+			<!--<div class="yis-social yis-fb"><a href="http://fb.me/yesterdayinspace"><span>Facebook</span></a></div>
+			<div class="yis-social yis-ig"><a href="http://www.instagram.com/yesterdayinspace"><span>Instagram</span></a></div>
+			<div class="yis-social yis-yt"><a href="http://goo.gl/hhLErK"><span>YouTube</span></a></div>-->
         </div>
     </nav>
-
     <partial name="_CookieConsentPartial" />
-
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>Yesterday in Space&trade; &copy; - @DateTime.Now.Year</p>
-            <a asp-page="/Privacy">Privacy Policy</a>
-        </footer>
     </div>
-
+	<footer>
+        <p>&copy; @DateTime.Now.Year SPLITelevision Productions | <a asp-page="/Privacy">Privacy Policy</a></p>
+		<div class="footer-third">
+			<a href="http://fb.me/SPLITelevision" title="SPLITelevision Productions">
+				<img src="/images/split_logo.svg" />
+			</a>
+		</div>
+		<div class="footer-third">
+			<a href="/" title="Yesterday, In Space">
+				<img src="/images/yis_foot_logo.svg" />
+			</a>
+		</div>
+		<div class="footer-third">
+			<a href="http://www.fringe.co.nz/" title="NZ Fringe Festival, Wellington 2019">
+				<img src="/images/fringe_logo_pink.svg" />
+			</a>
+		</div>
+    </footer>
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
@@ -63,17 +93,14 @@
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery"
                 crossorigin="anonymous"
-                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-        </script>
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
                 crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
-
     @RenderSection("Scripts", required: false)
 </body>
 </html>
