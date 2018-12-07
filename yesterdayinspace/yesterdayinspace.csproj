@@ -9,6 +9,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +24,7 @@
     <Content Remove="wwwroot\fonts\comic-jens\Changes.txt" />
     <Content Remove="wwwroot\fonts\comic-jens\ComicJensFreePro-Regular.ttf" />
     <Content Remove="wwwroot\fonts\comic-jens\Licence.txt" />
+    <Content Remove="bundleconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />
@@ -31,5 +33,6 @@
     <None Include="wwwroot\fonts\comic-jens\Changes.txt" />
     <None Include="wwwroot\fonts\comic-jens\ComicJensFreePro-Regular.ttf" />
     <None Include="wwwroot\fonts\comic-jens\Licence.txt" />
+    <None Include="bundleconfig.json" />
   </ItemGroup>
 </Project>
