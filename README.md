@@ -1,4 +1,4 @@
-![Yesterday, In Space](yesterdayinspace/wwwroot/images/yis_foot_logo.svg?raw=true)
+#Yesterday, In Space
 
 _Yesterday, In Space_ is a stage show produced by SPLITelevision Productions in Wellington, New Zealand.
 
