@@ -9,6 +9,7 @@ body {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    min-height: calc(100% - 405px);
 }
 
 /* Carousel */
@@ -159,6 +160,7 @@ body.home .yis-header {
 	text-shadow: 0 0 10px black;
 	-webkit-text-stroke: 0.5px;
 	-webkit-text-stroke-color: rgba(66,2,100,0.29);
+    border-radius: 0 0 10px 10px;
 }
 
 .yis-promo img {
@@ -206,18 +208,43 @@ footer {
 }
 
 .yis-social {
-	background: blue;
 	height: 50px;
 	width: 50px;
 	float: right;
+    background-size: 18px auto !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    opacity: 0.7;
 }
 
-.yis-social a span {
-	display: none;
+.yis-social:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.yis-yt {
+    background-image: url(/images/social_youtube.svg);
+    background-size: auto 16px !important;
+}
+
+.yis-ig {
+    background-image: url(/images/social_instagram.svg);
+}
+
+.yis-fb {
+    background-image: url(/images/social_facebook.svg);
+}
+
+.yis-gm {
+    background-image: url(/images/social_mail.svg);
+}
+
+.yis-social.yis-gm {
+    margin-right: -15px;
 }
 
 @media (max-width: 540px) {
-	.yis-promo img {
+    .yis-promo img {
 		width: 290px;
 	}
 
@@ -290,9 +317,5 @@ footer {
     .navbar-brand {
         height: 62px;
         margin-left: 5px;
-	}
-	
-	.yis-social a span {
-		display: initial;
 	}
 }

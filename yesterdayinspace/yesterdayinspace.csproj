@@ -11,4 +11,14 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\images\F_icon.svg" />
+    <Content Remove="wwwroot\images\social_facebook.svg" />
+    <Content Remove="wwwroot\images\Instagram_logo_2016.svg" />
+    <Content Remove="wwwroot\images\social_instagram.svg" />
+    <Content Remove="wwwroot\images\YouTube_Logo_2017.svg" />
+    <Content Remove="wwwroot\images\social_youtube.svg" />
+    <Content Remove="wwwroot\images\baseline-mail_outline-24px.svg" />
+    <Content Remove="wwwroot\images\social_mail.svg" />
+  </ItemGroup>
 </Project>
