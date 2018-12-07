@@ -20,5 +20,16 @@
     <Content Remove="wwwroot\images\social_youtube.svg" />
     <Content Remove="wwwroot\images\baseline-mail_outline-24px.svg" />
     <Content Remove="wwwroot\images\social_mail.svg" />
+    <Content Remove="wwwroot\fonts\comic-jens\Changes.txt" />
+    <Content Remove="wwwroot\fonts\comic-jens\ComicJensFreePro-Regular.ttf" />
+    <Content Remove="wwwroot\fonts\comic-jens\Licence.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\fonts\comic-jens\Changes.txt" />
+    <None Include="wwwroot\fonts\comic-jens\ComicJensFreePro-Regular.ttf" />
+    <None Include="wwwroot\fonts\comic-jens\Licence.txt" />
   </ItemGroup>
 </Project>

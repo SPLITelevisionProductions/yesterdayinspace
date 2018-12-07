@@ -4,12 +4,19 @@ body {
     padding-top: 50px;
 }
 
+/* Font Includes */
+
+/* Comic Jens - a free font that we'll use until "In Space" is finished. Will probably use it for fallback if we're missing glyphs */
+@font-face {
+    font-family: "Comic Jens";
+    src: url("/fonts/comic-jens/ComicJensFreePro-Regular.ttf") format("truetype");
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    min-height: calc(100% - 405px);
 }
 
 /* Carousel */
@@ -37,8 +44,6 @@ body {
 .navbar-inverse .navbar-nav > li > a {
     color: white;
     opacity: 0.7;
-    font-family: "Comic Jens", "Comic Sans", Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
 }
 
     /* Make the links opaque when hovered */
@@ -46,9 +51,9 @@ body {
         opacity: 1;
     }
 
-/* Change the heading font */
-h1, h2 {
-    font-family: "Comic Jens", "Comic Sans", Arial, Helvetica, sans-serif;
+/* Change heading and navigation fonts to "In Space", with fallbacks */
+h1, h2, .navbar-inverse .navbar-nav > li > a {
+    font-family: "Comic Jens", "Comic Sans MS", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
 
@@ -132,6 +137,15 @@ body.home .yis-header {
 
     .navbar-fixed-top .navbar-brand:hover {
         opacity: 1;
+    }
+
+/* And actual links while we're at it */
+a {
+    color: rgb(66,2,100);
+}
+
+    a:hover {
+        color: rgba(66,2,100,0.75);
     }
 
 /* Add a margin to the top of the content to account for the banner */
