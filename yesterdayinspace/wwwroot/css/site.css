@@ -12,6 +12,12 @@ body {
     src: url("/fonts/comic-jens/ComicJensFreePro-Regular.ttf") format("truetype");
 }
 
+/* In Space - Our font designed by Louise */
+@font-face {
+    font-family: "In Space";
+    src: url("/fonts/in-space/in-space.ttf") format("truetype");
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -53,7 +59,7 @@ body {
 
 /* Change heading and navigation fonts to "In Space", with fallbacks */
 h1, h2, .navbar-inverse .navbar-nav > li > a {
-    font-family: "Comic Jens", "Comic Sans MS", Arial, Helvetica, sans-serif;
+    font-family: "In Space", "Comic Jens", "Comic Sans MS", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
 

@@ -50,9 +50,12 @@
     <Content Remove="wwwroot\images\profiles\sponsors\splitelevision.svg" />
     <Content Remove="wwwroot\images\profiles\sponsors\fatg_full.svg" />
     <Content Remove="wwwroot\images\profiles\sponsors\shaddix_co_full.svg" />
+    <Content Remove="wwwroot\fonts\in-space\In Space.ttf" />
+    <Content Remove="wwwroot\fonts\in-space\in-space.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\fonts\in-space\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
@@ -60,9 +63,15 @@
     <None Remove="Properties\PublishProfiles\FolderProfile 3.pubxml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="wwwroot\fonts\comic-jens\Changes.txt" />
-    <None Include="wwwroot\fonts\comic-jens\ComicJensFreePro-Regular.ttf" />
-    <None Include="wwwroot\fonts\comic-jens\Licence.txt" />
+    <None Include="wwwroot\fonts\comic-jens\Changes.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\fonts\comic-jens\ComicJensFreePro-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\fonts\comic-jens\Licence.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="bundleconfig.json" />
     <None Include="wwwroot\images\profiles\cast\beth_m.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -187,6 +196,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\images\yis_planet_logo_white.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\fonts\in-space\in-space.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
