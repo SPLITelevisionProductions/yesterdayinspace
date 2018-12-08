@@ -55,38 +55,139 @@
     <Folder Include="wwwroot\fonts\" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Remove="Properties\PublishProfiles\FolderProfile 2.pubxml" />
+    <None Remove="Properties\PublishProfiles\FolderProfile 3.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="wwwroot\fonts\comic-jens\Changes.txt" />
     <None Include="wwwroot\fonts\comic-jens\ComicJensFreePro-Regular.ttf" />
     <None Include="wwwroot\fonts\comic-jens\Licence.txt" />
     <None Include="bundleconfig.json" />
-    <None Include="wwwroot\images\profiles\cast\beth_m.jpg" />
-    <None Include="wwwroot\images\profiles\cast\emii_w.jpg" />
-    <None Include="wwwroot\images\profiles\cast\jess_g.jpg" />
-    <None Include="wwwroot\images\profiles\cast\jules_d.jpg" />
-    <None Include="wwwroot\images\profiles\cast\lou_p.jpg" />
-    <None Include="wwwroot\images\profiles\cast\molly_m.jpg" />
-    <None Include="wwwroot\images\profiles\cast\troyj_m.jpg" />
-    <None Include="wwwroot\images\profiles\crew\cole_h.jpg" />
-    <None Include="wwwroot\images\profiles\crew\emma_m.jpg" />
-    <None Include="wwwroot\images\profiles\crew\hope_c.jpg" />
-    <None Include="wwwroot\images\profiles\crew\jono_l.jpg" />
-    <None Include="wwwroot\images\profiles\crew\kodi_m.jpg" />
-    <None Include="wwwroot\images\profiles\crew\logan_b.jpg" />
-    <None Include="wwwroot\images\profiles\crew\louise_h.jpg" />
-    <None Include="wwwroot\images\profiles\crew\stefan_r.jpg" />
-    <None Include="wwwroot\images\profiles\crew\tim_w.jpg" />
-    <None Include="wwwroot\images\profiles\crew\wesley_h.jpg" />
-    <None Include="wwwroot\images\profiles\sponsors\avcc.svg" />
-    <None Include="wwwroot\images\profiles\sponsors\creative_nz.svg" />
-    <None Include="wwwroot\images\profiles\sponsors\fatg.svg" />
-    <None Include="wwwroot\images\profiles\sponsors\fringe.svg" />
-    <None Include="wwwroot\images\profiles\sponsors\gryphon.svg" />
-    <None Include="wwwroot\images\profiles\sponsors\gryphon_full.svg" />
-    <None Include="wwwroot\images\profiles\sponsors\ivy_bar.svg" />
-    <None Include="wwwroot\images\profiles\sponsors\louise_beryl.svg" />
-    <None Include="wwwroot\images\profiles\sponsors\shaddix_co.svg" />
-    <None Include="wwwroot\images\profiles\sponsors\splitelevision.svg" />
-    <None Include="wwwroot\images\profiles\sponsors\fatg_full.svg" />
-    <None Include="wwwroot\images\profiles\sponsors\shaddix_co_full.svg" />
+    <None Include="wwwroot\images\profiles\cast\beth_m.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\cast\emii_w.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\cast\jess_g.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\cast\jules_d.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\cast\lou_p.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\cast\molly_m.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\cast\troyj_m.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\crew\cole_h.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\crew\emma_m.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\crew\hope_c.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\crew\jono_l.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\crew\kodi_m.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\crew\logan_b.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\crew\louise_h.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\crew\stefan_r.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\crew\tim_w.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\crew\wesley_h.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\avcc.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\creative_nz.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\fatg.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\fringe.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\gryphon.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\gryphon_full.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\ivy_bar.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\louise_beryl.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\shaddix_co.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\splitelevision.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\fatg_full.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\profiles\sponsors\shaddix_co_full.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="wwwroot\images\fringe_logo_pink.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\social_facebook.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\social_instagram.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\social_mail.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\social_youtube.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\split_logo.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\yis_background.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\yis_foot_logo.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\yis_foot_planet.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\yis_foot_stars.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\yis_nav.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\images\yis_planet_logo_white.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
