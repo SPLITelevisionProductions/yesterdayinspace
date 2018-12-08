@@ -48,6 +48,8 @@
     <Content Remove="wwwroot\images\profiles\sponsors\louise_beryl.svg" />
     <Content Remove="wwwroot\images\profiles\sponsors\shaddix_co.svg" />
     <Content Remove="wwwroot\images\profiles\sponsors\splitelevision.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\fatg_full.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\shaddix_co_full.svg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />
@@ -84,5 +86,7 @@
     <None Include="wwwroot\images\profiles\sponsors\louise_beryl.svg" />
     <None Include="wwwroot\images\profiles\sponsors\shaddix_co.svg" />
     <None Include="wwwroot\images\profiles\sponsors\splitelevision.svg" />
+    <None Include="wwwroot\images\profiles\sponsors\fatg_full.svg" />
+    <None Include="wwwroot\images\profiles\sponsors\shaddix_co_full.svg" />
   </ItemGroup>
 </Project>

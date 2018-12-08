@@ -263,79 +263,124 @@ footer {
     margin-right: -15px;
 }
 
-@media (max-width: 540px) {
-    .yis-promo img {
-		width: 290px;
-	}
-
-	.footer-third {
-		width: 100%;
-		float: initial;
-	}
-
-	footer {
-		height: calc((125px * 3) + 30px);
-		background:
-			url(/images/yis_foot_stars.svg) -50px bottom no-repeat,
-			url(/images/yis_foot_planet.svg) calc(100% + 50px) bottom no-repeat;
-		background-size: auto 125px;
-	}
+.yis-circlesect ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-@media (min-width: 768px) {
-	.footer-third {
-		width: calc(750px / 3);
-	}
-
-	.footer-third:first-of-type {
-		margin-left: calc((100% - 750px) / 2);
-	}
+.yis-circlesect {
+    text-align: center;
 }
 
-@media (min-width: 992px) {
-	.footer-third {
-		width: calc(970px / 3);
-	}
-
-	.footer-third:first-of-type {
-		margin-left: calc((100% - 970px) / 2);
-	}
+.yis-circlesect li {
+    display: inline-block;
+    margin: 10px;
+    list-style: none;
+    padding: 0;
+    /*width: 120px;*/
 }
 
-@media (min-width: 1200px) {
-	.footer-third {
-		width: calc(1170px / 3);
-	}
-
-	.footer-third:first-of-type {
-		margin-left: calc((100% - 1170px) / 2);
-	}
+.yis-profile {
+    display: inline-block;
+    text-align: initial;
+    width: 100px;
+    height: 100px;
+    background-image: url(/images/yis_background.jpg);
+    background-size: auto 200%;
+    background-repeat: no-repeat;
+    border-radius: 50px;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
+    .yis-profile img {
+        width: 90px;
+        height: 90px;
+        margin-top: 5px;
+        margin-left: 5px;
+        border-radius: 45px;
+        box-sizing: border-box;
+        border: 1px solid rgba(66,2,100,0.29);
+        background-color: white;
     }
 
-    /* Move YIS Header down and hide inline nav. Shorten to 200px, and move under nav */
-    .yis-header {
-        top: 62px;
-        height: 200px;
-        z-index: initial;
-        /* Disable pointer events to avoid mis-tapping/clicking */
-        pointer-events: none;
+    .yis-profile:hover img {
+        width: 96px;
+        height: 96px;
+        margin-top: 2px;
+        margin-left: 2px;
+        border-radius: 48px;
     }
 
-        .yis-header .navbar {
+    @media (max-width: 540px) {
+        .yis-promo img {
+            width: 290px;
+        }
+
+        .footer-third {
+            width: 100%;
+            float: initial;
+        }
+
+        footer {
+            height: calc((125px * 3) + 30px);
+            background: url(/images/yis_foot_stars.svg) -50px bottom no-repeat, url(/images/yis_foot_planet.svg) calc(100% + 50px) bottom no-repeat;
+            background-size: auto 125px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .footer-third {
+            width: calc(750px / 3);
+        }
+
+            .footer-third:first-of-type {
+                margin-left: calc((100% - 750px) / 2);
+            }
+    }
+
+    @media (min-width: 992px) {
+        .footer-third {
+            width: calc(970px / 3);
+        }
+
+            .footer-third:first-of-type {
+                margin-left: calc((100% - 970px) / 2);
+            }
+    }
+
+    @media (min-width: 1200px) {
+        .footer-third {
+            width: calc(1170px / 3);
+        }
+
+            .footer-third:first-of-type {
+                margin-left: calc((100% - 1170px) / 2);
+            }
+    }
+    /* Hide/rearrange for smaller screens */
+    @media screen and (max-width: 767px) {
+        /* Hide captions */
+        .carousel-caption {
             display: none;
         }
 
-    /* Make the home/brand link the same height as the navbar
+        /* Move YIS Header down and hide inline nav. Shorten to 200px, and move under nav */
+        .yis-header {
+            top: 62px;
+            height: 200px;
+            z-index: initial;
+            /* Disable pointer events to avoid mis-tapping/clicking */
+            pointer-events: none;
+        }
+
+            .yis-header .navbar {
+                display: none;
+            }
+
+        /* Make the home/brand link the same height as the navbar
        so it isn't awkwardly floating at the top */
-    .navbar-brand {
-        height: 62px;
-        margin-left: 5px;
-	}
-}
+        .navbar-brand {
+            height: 62px;
+            margin-left: 5px;
+        }
+    }

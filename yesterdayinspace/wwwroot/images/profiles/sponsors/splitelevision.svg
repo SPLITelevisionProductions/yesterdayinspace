@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91+devel+osxmenu r12922"
-   sodipodi:docname="splitelevision_logo_blue.svg"
+   sodipodi:docname="splitelevision.svg"
    inkscape:export-filename="/Users/logan/Dropbox/SPLITelevision Productions/Projects/SP Branding/SPLITelevision (2016)/Facebook/Profile-Page Cover/FPCover2048.png"
    inkscape:export-xdpi="276.64999"
    inkscape:export-ydpi="276.64999"
@@ -49,8 +49,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.32"
-     inkscape:cx="955.20338"
-     inkscape:cy="689.64843"
+     inkscape:cx="180.20338"
+     inkscape:cy="695.89843"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -87,13 +87,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-269.37546,178.26282)">
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.93900013;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect8972"
-       width="1381.25"
-       height="1381.25"
-       x="269.37546"
-       y="-178.26282" />
     <g
        id="g3774-1"
        transform="matrix(1.8647069,0,0,-1.8647069,1264.0063,1371.1943)" />
@@ -113,7 +106,8 @@
        id="g3808-8"
        transform="matrix(1.3333333,0,0,-1.3333333,1123.2067,1350.2887)" />
     <g
-       id="g10815">
+       id="g10815"
+       transform="matrix(1.110773,0,0,1.110773,-106.34225,-56.756006)">
       <path
          id="path8550"
          transform="translate(410,-37.637821)"

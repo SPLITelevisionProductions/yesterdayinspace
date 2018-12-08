@@ -30,18 +30,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs6787">
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath3342">
-      <circle
-         style="opacity:0.5;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:2.51072741;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.33741264"
-         id="circle3344"
-         cx="720"
-         cy="720"
-         r="565.89502" />
-    </clipPath>
-  </defs>
+     id="defs6787" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -61,8 +50,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="0.4881001"
-     inkscape:cx="227.64369"
-     inkscape:cy="653.64019"
+     inkscape:cx="621.00563"
+     inkscape:cy="657.73771"
      inkscape:window-x="0"
      inkscape:window-y="23"
      inkscape:window-maximized="0"
@@ -76,6 +65,6 @@
      id="image6791"
      x="0"
      y="0"
-     clip-path="url(#clipPath3342)"
+     clip-path="none"
      transform="matrix(0.9984184,0,0,0.9984184,-153.86125,-153.86125)" />
 </svg>

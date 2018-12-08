@@ -2,6 +2,94 @@
 @model CastCrewModel
 @{
     ViewData["Title"] = "Cast & Crew";
+
+    // Set up some peoples
+
+    // CAST MEMBERS
+    // CastMember(FULL NAME, CHARACTER NAME, IMAGE NAME, BIOGRAPHY)
+    CastMember bethm = new CastMember("Beth Marriott", "TBC", "beth_m", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember emiiw = new CastMember("Emii Wilson", "TBC", "emii_w", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember jessg = new CastMember("Jess Gallagher", "TBC", "jess_g", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember julesd = new CastMember("Jules Daniel", "TBC", "jules_d", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember loup = new CastMember("Lou Prior", "TBC", "lou_p", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember mollym = new CastMember("Molly Mason", "TBC", "molly_m", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember troyjm = new CastMember("Troy .J. Malcolm", "TBC", "troyj_m", "All of this is part of a large bio about the person next to/above it. wow");
+
+    CastMember[] cast = { bethm, emiiw, jessg, julesd, loup, mollym, troyjm };
+
+    // CREW MEMBERS
+    // CrewMember(FULL NAME, IMAGE NAME, BIOGRAPHY)
+    CrewMember coleh = new CrewMember("Cole Hampton", "cole_h", "All of this is part of a large bio about the person next to/above it. wow");
+    CrewMember emmam = new CrewMember("Emma Maguire", "emma_m", "All of this is part of a large bio about the person next to/above it. wow");
+    CrewMember hopec = new CrewMember("Hope Christiana", "hope_c", "All of this is part of a large bio about the person next to/above it. wow");
+    CrewMember jonol = new CrewMember("Jonathan Lake", "jono_l", "All of this is part of a large bio about the person next to/above it. wow");
+    CrewMember kodim = new CrewMember("Kodi Murray", "kodi_m", "All of this is part of a large bio about the person next to/above it. wow");
+    CrewMember loganb = new CrewMember("Logan Burrell", "logan_b", "All of this is part of a large bio about the person next to/above it. wow");
+    CrewMember louiseh = new CrewMember("Louise Holloway", "louise_h", "All of this is part of a large bio about the person next to/above it. wow");
+    CrewMember stefanr = new CrewMember("Stefan Roelofsz", "stefan_r", "All of this is part of a large bio about the person next to/above it. wow");
+    CrewMember timw = new CrewMember("Tim Williams", "tim_w", "All of this is part of a large bio about the person next to/above it. wow");
+    CrewMember wesleyh = new CrewMember("Wesley Hollis", "wesley_h", "All of this is part of a large bio about the person next to/above it. wow");
+
+    CrewMember[] crew = { coleh, emmam, hopec, jonol, kodim, loganb, louiseh, stefanr, timw, wesleyh };
+
+    // SPONSORS
+    // SponsorComp(COMPANY NAME, THUMBNAIL IMAGE NAME, FULL IMAGE NAME, BIOGRAPHY)
+    SponsorComp avcc = new SponsorComp("Aro Valley Community Centre", "avcc", "avcc", "All of this is part of a large bio about the person next to/above it. wow");
+    SponsorComp cnz = new SponsorComp("Creative New Zealand", "creative_nz", "creative_nz", "All of this is part of a large bio about the person next to/above it. wow");
+    SponsorComp fatg = new SponsorComp("Fringe at the Gryphon", "fatg", "fatg_full", "All of this is part of a large bio about the person next to/above it. wow");
+    SponsorComp fringe = new SponsorComp("NZ Fringe Festival", "fringe", "fringe", "All of this is part of a large bio about the person next to/above it. wow");
+    SponsorComp gryphon = new SponsorComp("Gryphon Theatre", "gryphon", "gryphon_full", "All of this is part of a large bio about the person next to/above it. wow");
+    SponsorComp ivy = new SponsorComp("Ivy Bar & Cabaret", "ivy_bar", "ivy_bar", "All of this is part of a large bio about the person next to/above it. wow");
+    SponsorComp louised = new SponsorComp("Louise Beryl Design", "louise_beryl", "louise_beryl", "All of this is part of a large bio about the person next to/above it. wow");
+    SponsorComp shaddix = new SponsorComp("Shaddix & Co", "shaddix_co", "shaddix_co_full", "All of this is part of a large bio about the person next to/above it. wow");
+    SponsorComp splitv = new SponsorComp("SPLITelevision Productions", "splitelevision", "splitelevision", "All of this is part of a large bio about the person next to/above it. wow");
+
+    SponsorComp[] sponsors = { avcc, cnz, fatg, fringe, gryphon, ivy, louised, shaddix, splitv };
 }
 
 <h2>@ViewData["Title"]</h2>
+
+<h2>Devised &amp; Performed By</h2>
+<section class="yis-circlesect yis-cast">
+    <ul>
+        @foreach (var member in cast)
+        {
+            <li data-name="@member.Name" data-charname="@member.CharName" data-fullimg="@member.ThumbImg" data-bio="@member.Bio">
+                <div class="yis-profile">
+                    <img src="/images/profiles/cast/@(member.ThumbImg).jpg" />
+                </div>
+                <div class="yis-name"><b>@member.Name</b> as <br />@member.CharName</div>
+            </li>
+        }
+    </ul>
+</section>
+
+<h2>With Support From</h2>
+<section class="yis-circlesect yis-crew">
+    <ul>
+        @foreach (var member in crew)
+        {
+            <li data-name="@member.Name" data-charname="" data-fullimg="@member.ThumbImg" data-bio="@member.Bio">
+                <div class="yis-profile">
+                    <img src="/images/profiles/crew/@(member.ThumbImg).jpg" />
+                </div>
+                <div class="yis-name"><b>@member.Name</b></div>
+            </li>
+        }
+    </ul>
+</section>
+
+<h2>And Assistance By</h2>
+<section class="yis-circlesect yis-sponsors">
+    <ul>
+        @foreach (var member in sponsors)
+        {
+            <li data-name="@member.Name" data-charname="" data-fullimg="@member.FullImg" data-bio="@member.Bio">
+                <div class="yis-profile">
+                    <img src="/images/profiles/sponsors/@(member.ThumbImg).svg" />
+                </div>
+                <div class="yis-name"><b>@member.Name</b></div>
+            </li>
+        }
+    </ul>
+</section>
