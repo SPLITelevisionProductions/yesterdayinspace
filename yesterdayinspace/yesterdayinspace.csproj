@@ -21,6 +21,33 @@
     <Content Remove="wwwroot\fonts\comic-jens\ComicJensFreePro-Regular.ttf" />
     <Content Remove="wwwroot\fonts\comic-jens\Licence.txt" />
     <Content Remove="bundleconfig.json" />
+    <Content Remove="wwwroot\images\profiles\cast\beth_m.jpg" />
+    <Content Remove="wwwroot\images\profiles\cast\emii_w.jpg" />
+    <Content Remove="wwwroot\images\profiles\cast\jess_g.jpg" />
+    <Content Remove="wwwroot\images\profiles\cast\jules_d.jpg" />
+    <Content Remove="wwwroot\images\profiles\cast\lou_p.jpg" />
+    <Content Remove="wwwroot\images\profiles\cast\molly_m.jpg" />
+    <Content Remove="wwwroot\images\profiles\cast\troyj_m.jpg" />
+    <Content Remove="wwwroot\images\profiles\crew\cole_h.jpg" />
+    <Content Remove="wwwroot\images\profiles\crew\emma_m.jpg" />
+    <Content Remove="wwwroot\images\profiles\crew\hope_c.jpg" />
+    <Content Remove="wwwroot\images\profiles\crew\jono_l.jpg" />
+    <Content Remove="wwwroot\images\profiles\crew\kodi_m.jpg" />
+    <Content Remove="wwwroot\images\profiles\crew\logan_b.jpg" />
+    <Content Remove="wwwroot\images\profiles\crew\louise_h.jpg" />
+    <Content Remove="wwwroot\images\profiles\crew\stefan_r.jpg" />
+    <Content Remove="wwwroot\images\profiles\crew\tim_w.jpg" />
+    <Content Remove="wwwroot\images\profiles\crew\wesley_h.jpg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\avcc.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\creative_nz.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\fatg.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\fringe.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\gryphon.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\gryphon_full.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\ivy_bar.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\louise_beryl.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\shaddix_co.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\splitelevision.svg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />
@@ -30,5 +57,32 @@
     <None Include="wwwroot\fonts\comic-jens\ComicJensFreePro-Regular.ttf" />
     <None Include="wwwroot\fonts\comic-jens\Licence.txt" />
     <None Include="bundleconfig.json" />
+    <None Include="wwwroot\images\profiles\cast\beth_m.jpg" />
+    <None Include="wwwroot\images\profiles\cast\emii_w.jpg" />
+    <None Include="wwwroot\images\profiles\cast\jess_g.jpg" />
+    <None Include="wwwroot\images\profiles\cast\jules_d.jpg" />
+    <None Include="wwwroot\images\profiles\cast\lou_p.jpg" />
+    <None Include="wwwroot\images\profiles\cast\molly_m.jpg" />
+    <None Include="wwwroot\images\profiles\cast\troyj_m.jpg" />
+    <None Include="wwwroot\images\profiles\crew\cole_h.jpg" />
+    <None Include="wwwroot\images\profiles\crew\emma_m.jpg" />
+    <None Include="wwwroot\images\profiles\crew\hope_c.jpg" />
+    <None Include="wwwroot\images\profiles\crew\jono_l.jpg" />
+    <None Include="wwwroot\images\profiles\crew\kodi_m.jpg" />
+    <None Include="wwwroot\images\profiles\crew\logan_b.jpg" />
+    <None Include="wwwroot\images\profiles\crew\louise_h.jpg" />
+    <None Include="wwwroot\images\profiles\crew\stefan_r.jpg" />
+    <None Include="wwwroot\images\profiles\crew\tim_w.jpg" />
+    <None Include="wwwroot\images\profiles\crew\wesley_h.jpg" />
+    <None Include="wwwroot\images\profiles\sponsors\avcc.svg" />
+    <None Include="wwwroot\images\profiles\sponsors\creative_nz.svg" />
+    <None Include="wwwroot\images\profiles\sponsors\fatg.svg" />
+    <None Include="wwwroot\images\profiles\sponsors\fringe.svg" />
+    <None Include="wwwroot\images\profiles\sponsors\gryphon.svg" />
+    <None Include="wwwroot\images\profiles\sponsors\gryphon_full.svg" />
+    <None Include="wwwroot\images\profiles\sponsors\ivy_bar.svg" />
+    <None Include="wwwroot\images\profiles\sponsors\louise_beryl.svg" />
+    <None Include="wwwroot\images\profiles\sponsors\shaddix_co.svg" />
+    <None Include="wwwroot\images\profiles\sponsors\splitelevision.svg" />
   </ItemGroup>
 </Project>
