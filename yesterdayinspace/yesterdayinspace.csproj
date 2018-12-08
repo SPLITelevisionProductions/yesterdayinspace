@@ -58,8 +58,6 @@
     <Folder Include="wwwroot\fonts\in-space\" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Remove="Properties\PublishProfiles\FolderProfile 2.pubxml" />
     <None Remove="Properties\PublishProfiles\FolderProfile 3.pubxml" />
   </ItemGroup>
   <ItemGroup>
@@ -199,7 +197,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\fonts\in-space\in-space.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\fonts\comic-jens\in-space.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 </Project>
