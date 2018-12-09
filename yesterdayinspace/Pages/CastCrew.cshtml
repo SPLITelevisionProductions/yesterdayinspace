@@ -7,13 +7,13 @@
 
     // CAST MEMBERS
     // CastMember(FULL NAME, CHARACTER NAME, IMAGE NAME, BIOGRAPHY)
-    CastMember bethm = new CastMember("Beth Marriott", "TBC", "beth_m", "All of this is part of a large bio about the person next to/above it. wow");
-    CastMember emiiw = new CastMember("Emii Wilson", "TBC", "emii_w", "All of this is part of a large bio about the person next to/above it. wow");
-    CastMember jessg = new CastMember("Jess Gallagher", "TBC", "jess_g", "All of this is part of a large bio about the person next to/above it. wow");
-    CastMember julesd = new CastMember("Jules Daniel", "TBC", "jules_d", "All of this is part of a large bio about the person next to/above it. wow");
-    CastMember loup = new CastMember("Lou Prior", "TBC", "lou_p", "All of this is part of a large bio about the person next to/above it. wow");
-    CastMember mollym = new CastMember("Molly Mason", "TBC", "molly_m", "All of this is part of a large bio about the person next to/above it. wow");
-    CastMember troyjm = new CastMember("Troy .J. Malcolm", "TBC", "troyj_m", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember bethm = new CastMember("Beth Marriott", "Co-Pilot", "beth_m", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember emiiw = new CastMember("Emii Wilson", "The Doctor", "emii_w", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember jessg = new CastMember("Jess Gallagher", "The Captain", "jess_g", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember julesd = new CastMember("Jules Daniel", "The Android", "jules_d", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember loup = new CastMember("Lou Prior", "The Scientist", "lou_p", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember mollym = new CastMember("Molly Mason", "The Pilot", "molly_m", "All of this is part of a large bio about the person next to/above it. wow");
+    CastMember troyjm = new CastMember("Troy J Malcolm", "The First Mate", "troyj_m", "All of this is part of a large bio about the person next to/above it. wow");
 
     CastMember[] cast = { bethm, emiiw, jessg, julesd, loup, mollym, troyjm };
 
@@ -35,8 +35,8 @@
     // SPONSORS
     // SponsorComp(COMPANY NAME, THUMBNAIL IMAGE NAME, FULL IMAGE NAME, BIOGRAPHY)
     SponsorComp avcc = new SponsorComp("Aro Valley Community Centre", "avcc", "avcc", "All of this is part of a large bio about the person next to/above it. wow");
-    SponsorComp cnz = new SponsorComp("Creative New Zealand", "creative_nz", "creative_nz", "All of this is part of a large bio about the person next to/above it. wow");
-    SponsorComp fatg = new SponsorComp("Fringe at the Gryphon", "fatg", "fatg_full", "All of this is part of a large bio about the person next to/above it. wow");
+    SponsorComp cnz = new SponsorComp("Creative NZ", "creative_nz", "creative_nz", "All of this is part of a large bio about the person next to/above it. wow");
+    SponsorComp fatg = new SponsorComp("FatG", "fatg", "fatg_full", "All of this is part of a large bio about the person next to/above it. wow");
     SponsorComp fringe = new SponsorComp("NZ Fringe Festival", "fringe", "fringe", "All of this is part of a large bio about the person next to/above it. wow");
     SponsorComp gryphon = new SponsorComp("Gryphon Theatre", "gryphon", "gryphon_full", "All of this is part of a large bio about the person next to/above it. wow");
     SponsorComp ivy = new SponsorComp("Ivy Bar & Cabaret", "ivy_bar", "ivy_bar", "All of this is part of a large bio about the person next to/above it. wow");
@@ -47,9 +47,9 @@
     SponsorComp[] sponsors = { avcc, cnz, fatg, fringe, gryphon, ivy, louised, shaddix, splitv };
 }
 
-<h2>@ViewData["Title"]</h2>
+<h1>@ViewData["Title"]</h1>
 
-<h2>Devised &amp; Performed By</h2>
+<h2 class="yis-cchead">Devised &amp; Performed By</h2>
 <section class="yis-circlesect yis-cast">
     <ul>
         @foreach (var member in cast)
@@ -58,13 +58,13 @@
                 <div class="yis-profile">
                     <img src="/images/profiles/cast/@(member.ThumbImg).jpg" />
                 </div>
-                <div class="yis-name"><b>@member.Name</b> as <br />@member.CharName</div>
+                <div class="yis-name"><b>@member.Name</b><br />@member.CharName</div>
             </li>
         }
     </ul>
 </section>
 
-<h2>With Support From</h2>
+<h2 class="yis-cchead">With Support From</h2>
 <section class="yis-circlesect yis-crew">
     <ul>
         @foreach (var member in crew)
@@ -79,7 +79,7 @@
     </ul>
 </section>
 
-<h2>And Assistance By</h2>
+<h2 class="yis-cchead">And Assistance By</h2>
 <section class="yis-circlesect yis-sponsors">
     <ul>
         @foreach (var member in sponsors)
