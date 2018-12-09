@@ -162,7 +162,9 @@
     <None Include="wwwroot\fonts\in-space\in-space-bold.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="wwwroot\images\og_thumbnail.png" />
+    <None Include="wwwroot\images\og_thumbnail.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Update="wwwroot\images\fringe_logo_pink.svg">
