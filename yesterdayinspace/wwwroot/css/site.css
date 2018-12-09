@@ -15,13 +15,13 @@ body {
 /* In Space - Our font designed by Louise */
 @font-face {
     font-family: "In Space";
-    src: url("/fonts/comic-jens/in-space.ttf") format("truetype");
+    src: url("/fonts/in-space/in-space.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "In Space";
     font-weight: bold;
-    src: url("/fonts/comic-jens/in-space-bold.ttf") format("truetype");
+    src: url("/fonts/in-space/in-space-bold.ttf") format("truetype");
 }
 
 /* Wrapping element */

@@ -51,8 +51,7 @@
     <Content Remove="wwwroot\images\profiles\sponsors\fatg_full.svg" />
     <Content Remove="wwwroot\images\profiles\sponsors\shaddix_co_full.svg" />
     <Content Remove="wwwroot\fonts\in-space\In Space.ttf" />
-    <Content Remove="wwwroot\fonts\in-space\in-space.ttf" />
-    <Content Remove="wwwroot\fonts\comic-jens\in-space-bold.ttf" />
+    <Content Remove="wwwroot\fonts\in-space\in-space-bold.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />
@@ -159,7 +158,9 @@
     <None Include="wwwroot\images\profiles\sponsors\shaddix_co_full.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="wwwroot\fonts\comic-jens\in-space-bold.ttf" />
+    <None Include="wwwroot\fonts\in-space\in-space-bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Update="wwwroot\images\fringe_logo_pink.svg">
@@ -199,9 +200,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\fonts\in-space\in-space.ttf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\fonts\comic-jens\in-space.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
