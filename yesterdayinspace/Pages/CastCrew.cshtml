@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model CastCrewModel
 @{
     ViewData["Title"] = "Cast & Crew";
@@ -48,6 +48,16 @@
     SponsorComp[] sponsors = { avcc, cnz, fatg, fringe, gryphon, ivy, louised, shaddix, splitv, tempest };
 }
 
+<div id="YIS-BioPane">
+	<div class="yis-bioimg">
+		<div class="yis-profile">
+            <img id="YIS-BioFullImg" src="" />
+        </div>
+        <div class="yis-name" id="YIS-BioName"></div>
+	</div>
+	<div class="yis-bioinfo"></div>
+</div>
+
 <h1>@ViewData["Title"]</h1>
 
 <h2 class="yis-cchead">Devised &amp; Performed By</h2>
@@ -55,7 +65,7 @@
     <ul>
         @foreach (var member in cast)
         {
-            <li data-name="@member.Name" data-charname="@member.CharName" data-fullimg="@member.ThumbImg" data-bio="@member.Bio">
+            <li data-name="@member.Name" data-charname="@member.CharName" data-fullimg="cast/@(member.ThumbImg)" data-bio="@member.Bio">
                 <div class="yis-profile">
                     <img src="/images/profiles/cast/@(member.ThumbImg).jpg" />
                 </div>
@@ -70,7 +80,7 @@
     <ul>
         @foreach (var member in crew)
         {
-            <li data-name="@member.Name" data-charname="" data-fullimg="@member.ThumbImg" data-bio="@member.Bio">
+            <li data-name="@member.Name" data-charname="" data-fullimg="crew/@(member.ThumbImg)" data-bio="@member.Bio">
                 <div class="yis-profile">
                     <img src="/images/profiles/crew/@(member.ThumbImg).jpg" />
                 </div>
@@ -85,7 +95,7 @@
     <ul>
         @foreach (var member in sponsors)
         {
-            <li data-name="@member.Name" data-charname="" data-fullimg="@member.FullImg" data-bio="@member.Bio">
+            <li data-name="@member.Name" data-charname="" data-fullimg="sponsors/@(member.FullImg)" data-bio="@member.Bio">
                 <div class="yis-profile">
                     <img src="/images/profiles/sponsors/@(member.ThumbImg).svg" />
                 </div>
