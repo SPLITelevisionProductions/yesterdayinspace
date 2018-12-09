@@ -54,7 +54,7 @@
     <Content Remove="wwwroot\fonts\in-space\in-space-bold.ttf" />
     <Content Remove="wwwroot\images\og_thumbnail.png" />
     <Content Remove="wwwroot\images\profiles\sponsors\tempest.svg" />
-    <Content Remove="wwwroot\manifest.webmanifest" />
+    <Content Remove="wwwroot\lib\manifest.json" />
     <Content Remove="wwwroot\images\webapp\icon-36.png" />
     <Content Remove="wwwroot\images\webapp\icon-48.png" />
     <Content Remove="wwwroot\images\webapp\icon-72.png" />
@@ -181,7 +181,7 @@
     <None Include="wwwroot\images\profiles\sponsors\tempest.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="wwwroot\manifest.webmanifest">
+    <None Include="wwwroot\lib\manifest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="wwwroot\images\webapp\icon-36.png">
