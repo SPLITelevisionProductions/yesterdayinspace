@@ -18,6 +18,12 @@ body {
     src: url("/fonts/comic-jens/in-space.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "In Space";
+    font-weight: bold;
+    src: url("/fonts/comic-jens/in-space-bold.ttf") format("truetype");
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -58,9 +64,31 @@ body {
     }
 
 /* Change heading and navigation fonts to "In Space", with fallbacks */
-h1, h2, .navbar-inverse .navbar-nav > li > a {
+h1, h2, .navbar-inverse .navbar-nav > li > a, .yis-circlesect li b {
     font-family: "In Space", "Comic Jens", "Comic Sans MS", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
+}
+
+h1, h2, .yis-circlesect li b {
+    font-weight: bold;
+    text-shadow: 1px 0 0 currentColor;
+}
+
+b {
+    letter-spacing: 1px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h2.yis-cchead {
+    padding-top: 10px;
+    text-align: center;
 }
 
 /* YIS Header */
@@ -277,15 +305,22 @@ footer {
 
 .yis-circlesect {
     text-align: center;
+    width: calc(100% + 30px);
+    margin-left: -15px;
 }
 
-.yis-circlesect li {
-    display: inline-block;
-    margin: 10px;
-    list-style: none;
-    padding: 0;
-    /*width: 120px;*/
-}
+    .yis-circlesect li {
+        display: inline-block;
+        margin: 10px;
+        list-style: none;
+        padding: 0;
+        width: 160px;
+        vertical-align: top
+    }
+
+        .yis-circlesect li b {
+            font-size: 12px;
+        }
 
 .yis-profile {
     display: inline-block;
@@ -296,6 +331,7 @@ footer {
     background-size: auto 200%;
     background-repeat: no-repeat;
     border-radius: 50px;
+    margin-bottom: 10px;
 }
 
     .yis-profile img {
