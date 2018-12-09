@@ -146,7 +146,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="wwwroot\images\profiles\sponsors\louise_beryl.svg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="wwwroot\images\profiles\sponsors\shaddix_co.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
