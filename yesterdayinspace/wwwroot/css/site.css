@@ -64,7 +64,7 @@ body {
     }
 
 /* Change heading and navigation fonts to "In Space", with fallbacks */
-h1, h2, .navbar-inverse .navbar-nav > li > a, .yis-circlesect li b {
+h1, h2, .navbar-inverse .navbar-nav > li > a, .yis-name b {
     font-family: "In Space", "Comic Jens", "Comic Sans MS", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
@@ -330,31 +330,87 @@ footer {
     background-image: url(/images/yis_background.jpg);
     background-size: auto 200%;
     background-repeat: no-repeat;
-    border-radius: 50px;
+    border-radius: 50%;
     margin-bottom: 10px;
 }
 
     .yis-profile img {
-        width: 90px;
-        height: 90px;
-        margin-top: 5px;
-        margin-left: 5px;
-        border-radius: 45px;
+        width: 90%;
+        height: 90%;
+        margin-top: 5%;
+        margin-left: 5%;
+        border-radius: 50%;
         box-sizing: border-box;
         border: 1px solid rgba(66,2,100,0.29);
         background-color: white;
     }
 
     .yis-profile:hover img {
-        width: 96px;
-        height: 96px;
-        margin-top: 2px;
-        margin-left: 2px;
-        border-radius: 48px;
+        width: 96%;
+        height: 96%;
+        margin-top: 2%;
+        margin-left: 2%;
+        border-radius: 50%;
 	}
 	
 #YIS-BioPane {
 	display: none;
+	position: fixed;
+    background: #ececec;
+    left: calc(50% - (758px/2));
+    top: calc(50% - (360px/2));
+    width: 758px;
+    height: 360px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
+    box-sizing: border-box;
+	padding: 15px;
+	z-index: 1036;
+}
+
+.yis-bioimg {
+	width: 320px;
+    height: 100%;
+	text-align: center;
+	float: left;
+}
+
+.yis-bioimg .yis-profile {
+	width: 240px;
+	height: 240px;
+	pointer-events: none;
+	margin-bottom: 20px;
+}
+
+.yis-bioimg .yis-name {
+	font-size: 1.2em;
+}
+
+#YIS-BioInfo {
+	width: calc(100% - 335px);
+	height: calc(100% - 30px);
+	box-sizing: border-box;
+	float: left;
+	margin: 15px 0px 15px 15px;
+	overflow-y: scroll;
+	text-align: justify;
+}
+
+.yis-close {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	background-image: url(/images/diag_close.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.7;
+}
+
+.yis-close:hover {
+	opacity: 1;
 }
 
     @media (max-width: 540px) {
@@ -428,5 +484,28 @@ footer {
         .navbar-brand {
             height: 62px;
             margin-left: 5px;
-        }
+		}
+		
+		#YIS-BioPane {
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 0px;
+			box-shadow: none;
+			overflow-y: scroll;
+		}
+
+		.yis-bioimg {
+			width: 100%;
+    		height: auto;
+    		padding-bottom: 20px;
+		}
+
+		#YIS-BioInfo {
+			width: 100%;
+    		height: auto;
+    		overflow: initial;
+    		margin: 0;
+		}
     }
