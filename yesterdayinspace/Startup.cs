@@ -50,7 +50,6 @@ namespace yesterdayinspace
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
 
             app.UseMvc();
         }
