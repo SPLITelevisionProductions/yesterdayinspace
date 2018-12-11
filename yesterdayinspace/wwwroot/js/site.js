@@ -3,31 +3,44 @@
 
 // Shamelessly taken from librarium-sqlite
 $(document).ready(function() {
-	// We can basically use this code on any circle-section as
-	// the attributes are mostly the same. Checks are done in showBio()
-	$(".yis-circlesect").on("click","li", function(event){
-		event.preventDefault();
-		name = $(this).attr('data-name');
-		char = $(this).attr('data-charname');
-		img = $(this).attr('data-fullimg');
-		bio = $(this).attr('data-bio');
-		showBio(name, char, img, bio);
-	});
+    // We can basically use this code on any circle-section as
+    // the attributes are mostly the same. Checks are done in showBio()
+    $(".yis-circlesect").on("click","li", function(event){
+        event.preventDefault();
+        //name = $(this).attr('data-name');
+        //char = $(this).attr('data-charname');
+        //img = $(this).attr('data-fullimg');
+        //bio = $(this).attr('data-bio');
+        //showBio(name, char, img, bio);
+        var id = $(this).attr('data-id');
+        console.log(id);
+        getEntity(id);
+        $('#YIS-BioPane').fadeIn();
+    });
 });
 
-function showBio(name, char, img, bio) {
-	var n,c,i,b,fn;
-	n = name;
-	c = char;
-	i = img;
-	b = bio;
+function getEntity(id) {
+    var query = {id: id};
+    console.log(query);
+    
+    $.getJSON('/GetEntity', query)
+        .done(function(json) {
+            $.each( json, function( key, val ) {
+                // Pull data from the JSON into shorter variables
+                console.log("Got item listing ->"); console.log(json);
+                var name = json[key]["name"];
+                var role = json[key]["role"];
+                var img = json[key]["image"];
+                var bio = json[key]["bio"];
+                console.log(name);
 
-	fn = "<b>" + n + "</b>";
+                fn = "<b>" + name + "</b>";
 
-	if(c) { fn = fn + "<br />" + c; }
+                if(role) { fn = fn + "<br />" + role; }
 
-	$('#YIS-BioFullImg').attr('src', '/images/profiles/' + i);
-	$('#YIS-BioName').html(fn);
-	$('#YIS-BioInfo').html(b);
-	$('#YIS-BioPane').fadeIn();
+                $('#YIS-BioFullImg').attr('src', img);
+                $('#YIS-BioName').html(fn);
+                $('#YIS-BioInfo').html(bio);
+            });
+        });
 }

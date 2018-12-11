@@ -4,56 +4,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using yesterdayinspace.Models;
 
-namespace yesterdayinspace.Pages
+namespace yesterdayinspace.Pages.CCEntities
 {
     public class CastCrewModel : PageModel
     {
-        public void OnGet()
-        {
-        }
-    }
+        private readonly yesterdayinspace.Models.YISContext _context;
 
-    public class CastMember
-    {
-        public string Name { get; set; }
-        public string CharName { get; set; }
-        public string ThumbImg { get; set; }
-        public string Bio { get; set; }
-        public CastMember(string name, string charname, string thumb, string bio)
+        public CastCrewModel(yesterdayinspace.Models.YISContext context)
         {
-            Name = name;
-            CharName = charname;
-            ThumbImg = thumb;
-            Bio = bio;
+            _context = context;
         }
-    }
 
-    public class CrewMember
-    {
-        public string Name { get; set; }
-        public string ThumbImg { get; set; }
-        public string Bio { get; set; }
-        public CrewMember(string name, string thumb, string bio)
-        {
-            Name = name;
-            ThumbImg = thumb;
-            Bio = bio;
-        }
-    }
+        public IList<CCEntity> CCEntity { get; set; }
 
-    public class SponsorComp
-    {
-        public string Name { get; set; }
-        public string ThumbImg { get; set; }
-        public string FullImg { get; set; }
-        public string Bio { get; set; }
-        public SponsorComp(string name, string thumb, string full, string bio)
+        public async Task OnGetAsync()
         {
-            Name = name;
-            ThumbImg = thumb;
-            FullImg = full;
-            Bio = bio;
+            IQueryable<CCEntity> Entity = from s in _context.CCEntity
+                                            select s;
+
+            Entity = Entity.OrderBy(s => s.Name);
+
+            CCEntity = await Entity.AsNoTracking().ToListAsync();
         }
     }
 }

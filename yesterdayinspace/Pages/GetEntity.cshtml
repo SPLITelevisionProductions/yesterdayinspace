@@ -1,0 +1,17 @@
+﻿@page
+@model yesterdayinspace.Pages.CCEntities.GetEntityModel
+@{
+    Layout = null;
+
+    Response.ContentType = "application/json";
+
+    // When C# can't encode a small bit of JSON itself, just do it yourself
+
+}
+
+[{
+    "name":"@Html.Raw(Model.CCEntity.Name)",
+    "role":"@Html.Raw(Model.CCEntity.Role)",
+    "image":"@Html.Raw(Model.CCEntity.BioImg)",
+    "bio":"@Html.Raw(Model.CCEntity.BioText)"
+}]
