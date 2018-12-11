@@ -4,6 +4,12 @@
 	<head>
 		<title>Yesterday, In Space</title>
 		<meta charset="utf-8" />
+		<meta property="og:title" content="Yesterday, In Space" />
+    	<meta property="og:type" content="website" />
+    	<meta property="og:image" content="https://raw.githubusercontent.com/SPLITelevisionProductions/yesterdayinspace/master/yesterdayinspace/wwwroot/images/og_thumbnail.png" />
+    	<meta property="og:image:width" content="1200" />
+    	<meta property="og:image:height" content="627" />
+    	<meta property="og:description" content="Come aboard and join the crew of Yesterday for a journey... in space! Witness the comedy, drama, and relationships of Sci-Fi meeting Soap Opera in this brand-new interactive stage show! Featuring original music and songs from the members of SPLITelevision Productions, this show is taking off!" />
 		<style type="text/css">
 			/* Parts of this are copied from site.css */
 
@@ -47,6 +53,13 @@
 				padding: 15px;
 				width: 100%;
 				height: 100%;
+				overflow: hidden;
+			}
+
+			.wrapper {
+				width: 100%;
+				height: 100%;
+				overflow-y: scroll;
 			}
 
 			/* Change heading and navigation fonts to "In Space", with fallbacks */
@@ -57,7 +70,8 @@
 
 			h1, h2, .yis-circlesect li b {
     			font-weight: bold;
-    			text-shadow: 1px 0 0 currentColor;
+				text-shadow: 0 0 10px black;
+				text-align: center;
 			}
 
 			img {
