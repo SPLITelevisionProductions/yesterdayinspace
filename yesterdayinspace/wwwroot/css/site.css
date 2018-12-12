@@ -494,6 +494,7 @@ footer {
 			border-radius: 0px;
 			box-shadow: none;
 			overflow-y: scroll;
+			pointer-events: all;
 		}
 
 		.yis-bioimg {
