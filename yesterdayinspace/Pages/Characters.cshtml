@@ -1,9 +1,35 @@
 @page
-@model ContactModel
+@model yesterdayinspace.Pages.CCEntities.CharactersModel
 @{
     ViewData["Title"] = "Characters";
 }
+<div id="YIS-BioPane">
+    <div class="yis-close" onclick="$('#YIS-BioPane').fadeOut()"></div>
+    <div class="yis-bioimg">
+        <div class="yis-profile">
+            <img id="YIS-BioFullImg" src="" />
+        </div>
+        <div class="yis-name" id="YIS-BioName"></div>
+    </div>
+    <div id="YIS-BioInfo"></div>
+</div>
+
 <h1>@ViewData["Title"]</h1>
-<p>&gt;&gt; TROY TODO</p>
 
-
+<section class="yis-charsect">
+    <ul>
+    @foreach (var item in Model.CCEntity)
+    {
+        if (item.Type == "char")
+        {
+        <li data-id="@Html.DisplayFor(modelItem => item.ID)">
+            <div class="yis-profile">
+                <img src="@(Html.DisplayFor(modelItem => item.ThumbImg))" />
+            </div>
+            <div class="yis-name"><b>@Html.DisplayFor(modelItem => item.Name)</b> @Html.DisplayFor(modelItem => item.Role)</div>
+            <div class="yis-bio">@Html.Raw(item.BioText)</div>
+        </li>
+        }
+    }
+    </ul>
+</section>
