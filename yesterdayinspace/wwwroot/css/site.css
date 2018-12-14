@@ -2,6 +2,7 @@
 for details on configuring this project to bundle and minify static web assets. */
 body {
     padding-top: 50px;
+    color: rgb(56,32,70);
 }
 
 /* Font Includes */
@@ -69,7 +70,7 @@ h1, h2, .navbar-inverse .navbar-nav > li > a, .yis-name b {
     text-transform: uppercase;
 }
 
-h1, h2, .yis-circlesect li b {
+h1, h2, .yis-name b {
     font-weight: bold;
     text-shadow: 1px 0 0 currentColor;
 }
