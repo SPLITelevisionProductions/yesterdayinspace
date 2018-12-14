@@ -46,7 +46,7 @@
     <Content Remove="wwwroot\images\profiles\sponsors\gryphon.svg" />
     <Content Remove="wwwroot\images\profiles\sponsors\gryphon_full.svg" />
     <Content Remove="wwwroot\images\profiles\sponsors\ivy_bar.svg" />
-    <Content Remove="wwwroot\images\profiles\sponsors\louise_beryl.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\louise_beryl.png" />
     <Content Remove="wwwroot\images\profiles\sponsors\shaddix_co.svg" />
     <Content Remove="wwwroot\images\profiles\sponsors\splitelevision.svg" />
     <Content Remove="wwwroot\images\profiles\sponsors\fatg_full.svg" />
@@ -54,7 +54,7 @@
     <Content Remove="wwwroot\fonts\in-space\In Space.ttf" />
     <Content Remove="wwwroot\fonts\in-space\in-space-bold.ttf" />
     <Content Remove="wwwroot\images\og_thumbnail.png" />
-    <Content Remove="wwwroot\images\profiles\sponsors\tempest.svg" />
+    <Content Remove="wwwroot\images\profiles\sponsors\tempest.jpg" />
     <Content Remove="wwwroot\lib\manifest.json" />
     <Content Remove="wwwroot\images\webapp\icon-36.png" />
     <Content Remove="wwwroot\images\webapp\icon-48.png" />
@@ -159,7 +159,7 @@
     <None Include="wwwroot\images\profiles\sponsors\ivy_bar.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="wwwroot\images\profiles\sponsors\louise_beryl.svg">
+    <None Include="wwwroot\images\profiles\sponsors\louise_beryl.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="wwwroot\images\profiles\sponsors\shaddix_co.svg">
@@ -180,7 +180,7 @@
     <None Include="wwwroot\images\og_thumbnail.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="wwwroot\images\profiles\sponsors\tempest.svg">
+    <None Include="wwwroot\images\profiles\sponsors\tempest.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="wwwroot\lib\manifest.json">
