@@ -2,50 +2,6 @@
 @model yesterdayinspace.Pages.CCEntities.CastCrewModel
 @{
     ViewData["Title"] = "Cast & Crew";
-
-    // Set up some peoples
-
-    // CAST MEMBERS
-    // CastMember(FULL NAME, CHARACTER NAME, IMAGE NAME, BIOGRAPHY)
-    /*CastMember bethm = new CastMember("Beth Marriott", "Co-Pilot", "beth_m", "All of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wowAll of this is part of a large bio about the person next to/above it. wow");
-    CastMember emiiw = new CastMember("Emii Wilson", "Doctor", "emii_w", "All of this is part of a large bio about the person next to/above it. wow");
-    CastMember jessg = new CastMember("Jess Gallagher", "Captain", "jess_g", "All of this is part of a large bio about the person next to/above it. wow");
-    CastMember julesd = new CastMember("Jules Daniel", "Android", "jules_d", "All of this is part of a large bio about the person next to/above it. wow");
-    CastMember loup = new CastMember("Lou Prior", "Scientist", "lou_p", "All of this is part of a large bio about the person next to/above it. wow");
-    CastMember mollym = new CastMember("Molly Mason", "Pilot", "molly_m", "All of this is part of a large bio about the person next to/above it. wow");
-    CastMember troyjm = new CastMember("Troy J Malcolm", "First Mate", "troyj_m", "All of this is part of a large bio about the person next to/above it. wow");
-
-    CastMember[] cast = { bethm, emiiw, jessg, julesd, loup, mollym, troyjm };
-
-    // CREW MEMBERS
-    // CrewMember(FULL NAME, IMAGE NAME, BIOGRAPHY)
-    CrewMember pamh = new CrewMember("Pamela Hancock", "cole_h", "All of this is part of a large bio about the person next to/above it. wow");
-    CrewMember emmam = new CrewMember("Emma Maguire", "emma_m", "All of this is part of a large bio about the person next to/above it. wow");
-    CrewMember hopec = new CrewMember("Hope Christiana", "hope_c", "All of this is part of a large bio about the person next to/above it. wow");
-    CrewMember jonol = new CrewMember("Jonathan Lake", "jono_l", "All of this is part of a large bio about the person next to/above it. wow");
-    CrewMember kodim = new CrewMember("Kodi Murray", "kodi_m", "All of this is part of a large bio about the person next to/above it. wow");
-    CrewMember loganb = new CrewMember("Logan Burrell", "logan_b", "All of this is part of a large bio about the person next to/above it. wow");
-    CrewMember louiseh = new CrewMember("Louise Beryl", "louise_h", "All of this is part of a large bio about the person next to/above it. wow");
-    CrewMember stefanr = new CrewMember("Stefan Roelofsz", "stefan_r", "All of this is part of a large bio about the person next to/above it. wow");
-    CrewMember timw = new CrewMember("Tim Williams", "tim_w", "All of this is part of a large bio about the person next to/above it. wow");
-    CrewMember wesleyh = new CrewMember("Wesley Hollis", "wesley_h", "All of this is part of a large bio about the person next to/above it. wow");
-
-    CrewMember[] crew = { emmam, hopec, jonol, kodim, loganb, louiseh, pamh, stefanr, timw, wesleyh };
-
-    // SPONSORS
-    // SponsorComp(COMPANY NAME, THUMBNAIL IMAGE NAME, FULL IMAGE NAME, BIOGRAPHY)
-    SponsorComp avcc = new SponsorComp("Aro Valley Community Centre", "avcc", "avcc", "All of this is part of a large bio about the person next to/above it. wow");
-    SponsorComp cnz = new SponsorComp("Creative NZ", "creative_nz", "creative_nz", "All of this is part of a large bio about the person next to/above it. wow");
-    SponsorComp fatg = new SponsorComp("FatG", "fatg", "fatg_full", "All of this is part of a large bio about the person next to/above it. wow");
-    SponsorComp fringe = new SponsorComp("Fringe Festival NZ", "fringe", "fringe", "All of this is part of a large bio about the person next to/above it. wow");
-    SponsorComp gryphon = new SponsorComp("Gryphon Theatre", "gryphon", "gryphon_full", "All of this is part of a large bio about the person next to/above it. wow");
-    SponsorComp ivy = new SponsorComp("Ivy Bar & Cabaret", "ivy_bar", "ivy_bar", "All of this is part of a large bio about the person next to/above it. wow");
-    SponsorComp louised = new SponsorComp("Louise Beryl Design", "louise_beryl", "louise_beryl", "All of this is part of a large bio about the person next to/above it. wow");
-    SponsorComp shaddix = new SponsorComp("Shaddix & Co", "shaddix_co", "shaddix_co_full", "All of this is part of a large bio about the person next to/above it. wow");
-    SponsorComp splitv = new SponsorComp("SPLITelevision Productions", "splitelevision", "splitelevision", "All of this is part of a large bio about the person next to/above it. wow");
-    SponsorComp tempest = new SponsorComp("Tempest", "tempest", "tempest", "All of this is part of a large bio about the person next to/above it. wow");
-
-    SponsorComp[] sponsors = { avcc, cnz, fatg, fringe, gryphon, ivy, louised, shaddix, splitv, tempest };*/
 }
 
 <div id="YIS-BioPane">
@@ -108,7 +64,7 @@
             <div class="yis-profile">
                 <img src="@(Html.DisplayFor(modelItem => item.ThumbImg))" />
             </div>
-            <div class="yis-name"><b>@Html.DisplayFor(modelItem => item.Name)</b></div>
+            <div class="yis-name"><b>@Html.DisplayFor(modelItem => item.Name)</b><br />@Html.DisplayFor(modelItem => item.Role)</div>
         </li>
     }
 }

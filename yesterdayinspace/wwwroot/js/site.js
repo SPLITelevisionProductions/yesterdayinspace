@@ -29,14 +29,16 @@ function getEntity(id) {
                 // Pull data from the JSON into shorter variables
                 console.log("Got item listing ->"); console.log(json);
                 var name = json[key]["name"];
-                var role = json[key]["role"];
+				var role = json[key]["role"];
+				var altrole = json[key]["altrole"];
                 var img = json[key]["image"];
                 var bio = json[key]["bio"];
                 console.log(name);
 
                 fn = "<b>" + name + "</b>";
 
-                if(role) { fn = fn + "<br />" + role; }
+				if(role) { fn = fn + "<br />" + role; }
+				if(altrole) { fn = fn + "<br />" + altrole; }
 
                 $('#YIS-BioFullImg').attr('src', img);
                 $('#YIS-BioName').html(fn);

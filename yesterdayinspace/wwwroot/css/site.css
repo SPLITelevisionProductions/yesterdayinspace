@@ -359,9 +359,9 @@ footer {
 	position: fixed;
     background: #ececec;
     left: calc(50% - (758px/2));
-    top: calc(50% - (360px/2));
+    top: calc(50% - (512px/2));
     width: 758px;
-    height: 360px;
+    height: 512px;
     border-radius: 10px;
     box-shadow: 0 0 20px black;
     box-sizing: border-box;
