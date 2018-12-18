@@ -28,7 +28,7 @@
             <div class="yis-profile">
                 <img src="@(Html.DisplayFor(modelItem => item.ThumbImg))" />
             </div>
-            <div class="yis-name"><b>@Html.DisplayFor(modelItem => item.Name)</b><br />@Html.DisplayFor(modelItem => item.Role)</div>
+            <div class="yis-name"><b>@Html.Raw(item.Name)</b><br />@Html.DisplayFor(modelItem => item.Role)</div>
         </li>
         }
     }
@@ -46,7 +46,7 @@
                 <div class="yis-profile">
                     <img src="@(Html.DisplayFor(modelItem => item.ThumbImg))" />
                 </div>
-                <div class="yis-name"><b>@Html.DisplayFor(modelItem => item.Name)</b></div>
+                <div class="yis-name"><b>@Html.Raw(item.Name)</b></div>
             </li>
     }
 }
@@ -64,7 +64,7 @@
             <div class="yis-profile">
                 <img src="@(Html.DisplayFor(modelItem => item.ThumbImg))" />
             </div>
-            <div class="yis-name"><b>@Html.DisplayFor(modelItem => item.Name)</b><br />@Html.DisplayFor(modelItem => item.Role)</div>
+            <div class="yis-name"><b>@Html.Raw(item.Name)</b></div>
         </li>
     }
 }

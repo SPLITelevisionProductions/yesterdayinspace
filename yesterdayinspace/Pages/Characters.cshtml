@@ -3,16 +3,6 @@
 @{
     ViewData["Title"] = "Characters";
 }
-<div id="YIS-BioPane">
-    <div class="yis-close" onclick="$('#YIS-BioPane').fadeOut()"></div>
-    <div class="yis-bioimg">
-        <div class="yis-profile">
-            <img id="YIS-BioFullImg" src="" />
-        </div>
-        <div class="yis-name" id="YIS-BioName"></div>
-    </div>
-    <div id="YIS-BioInfo"></div>
-</div>
 
 <h1>@ViewData["Title"]</h1>
 
@@ -26,8 +16,10 @@
             <div class="yis-profile">
                 <img src="@(Html.DisplayFor(modelItem => item.ThumbImg))" />
             </div>
-            <div class="yis-name"><b>@Html.DisplayFor(modelItem => item.Name)</b> @Html.DisplayFor(modelItem => item.Role)</div>
-            <div class="yis-bio">@Html.Raw(item.BioText)</div>
+			<div class="yis-charbio">
+				<div class="yis-name"><b>@Html.DisplayFor(modelItem => item.Name)</b> <span>@Html.DisplayFor(modelItem => item.Role)</span></div>
+            	<div class="yis-bio">@Html.Raw(item.BioText)</div>
+			</div>
         </li>
         }
     }

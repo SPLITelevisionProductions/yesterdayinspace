@@ -367,13 +367,23 @@ footer {
     box-sizing: border-box;
 	padding: 15px;
 	z-index: 1036;
+	background: url(/images/yis_background.jpg);
+    background-size: cover;
 }
 
 .yis-bioimg {
-	width: 320px;
-    height: 100%;
+	width: 290px;
+	height: calc(100% - 30px);
+	margin-top: 30px;
 	text-align: center;
 	float: left;
+	color: white;
+    border-radius: 15px;
+	background: rgba(66,2,100,0.55);
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+	box-sizing: border-box;
+	padding-top: 40px;
 }
 
 .yis-bioimg .yis-profile {
@@ -381,6 +391,7 @@ footer {
 	height: 240px;
 	pointer-events: none;
 	margin-bottom: 20px;
+	background: transparent;
 }
 
 .yis-bioimg .yis-name {
@@ -388,30 +399,95 @@ footer {
 }
 
 #YIS-BioInfo {
-	width: calc(100% - 335px);
+	width: calc(100% - 305px);
 	height: calc(100% - 30px);
 	box-sizing: border-box;
 	float: left;
-	margin: 15px 0px 15px 15px;
 	overflow-y: scroll;
 	text-align: justify;
+	margin-top: 30px;
+    margin-left: 15px;
+	background: rgba(255,255,255,0.95);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.YIS-BioThem {
+	list-style: none;
+    text-indent: 20px;
+    padding: 0;
+}
+
+.YIS-BioThem li {
+	padding: 5px 0px 5px 0px;
+}
+
+#YIS-BioInfo svg {
+	width: 20px;
+    height: 20px;
+    fill: currentColor !important;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
 .yis-close {
-	width: 15px;
-	height: 15px;
+	width: 45px;
+	height: 45px;
 	position: absolute;
-	top: 10px;
-	right: 15px;
+	top: 0;
+	right: 0;
 	background-image: url(/images/diag_close.svg);
-	background-size: 100%;
+	background-size: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
 	opacity: 0.7;
+	z-index: 1038;
 }
 
 .yis-close:hover {
 	opacity: 1;
+}
+
+.yis-charsect ul {
+	list-style: none;
+	padding: 0;
+}
+
+.yis-charsect .yis-profile {
+	float: left;
+}
+
+.yis-charsect .yis-charbio {
+    width: calc(100% - 115px);
+    float: right;
+    padding-top: 10px;
+}
+
+.yis-charsect li {
+	display: block;
+	overflow: auto;
+	width: 100%;
+	height: auto;
+	padding-bottom: 30px;
+}
+
+.yis-charsect .yis-name {
+	padding-bottom: 5px;
+}
+
+.yis-charsect .yis-name span {
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.yis-charsect li:nth-child(even) .yis-profile {
+	float: right;
+}
+
+.yis-charsect li:nth-child(even) .yis-charbio {
+	float: left;
 }
 
     @media (max-width: 540px) {
@@ -508,6 +584,15 @@ footer {
 			width: 100%;
     		height: auto;
     		overflow: initial;
-    		margin: 0;
+			margin: 0;
+			margin-top: 15px;
+		}
+
+		.yis-close {
+			position: fixed;
+			top: 5px;
+			right: 5px;
+			border-radius: 50%;
+			background-color: rgba(66,2,100,0.9);
 		}
     }
