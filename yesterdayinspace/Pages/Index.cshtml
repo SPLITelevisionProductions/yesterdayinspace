@@ -5,14 +5,38 @@
     ViewData["Class"] = "home";
 }
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+</script>
+
 <div class="yis-promo">
 	<img src="/images/yis_planet_logo_white.svg" title="Yesterday, In Space" />
-	<h1>Gryphon Theatre</h1>
-	<h2>7:30 pm 18th-20th March 2019</h2>
-	<p>Come aboard and join the crew of Yesterday for a journey... in space! Witness the comedy, drama, and relationships of Sci-Fi meeting Soap Opera in this brand-new interactive stage show! Featuring original music and songs from the members of SPLITelevision Productions, this show is taking off!</p>
+	<div class="yis-textcont">
+		<h1>Gryphon Theatre</h1>
+		<h2>7:30 pm 18th-20th March 2019</h2>
+		<button type="button" class="btn btn-primary btn-lg" onclick="window.location='https://fringe.co.nz/show/32124'">Book Now ›</button>
+		<p>Come aboard and join the crew of Yesterday for a journey... in space! Witness the comedy, drama, and relationships of Sci-Fi meeting Soap Opera in this brand-new interactive stage show! Featuring original music and songs from the members of SPLITelevision Productions, this show is taking off!</p>
+	</div>
 </div>
 <p>&gt;&gt; TROY TODO</p>
 <div class="row">
+	<div class="col-md-4">
+        <h2>Ticket Details</h2>
+        <p><b>Tickets are available now on Fringe's Website!</b></p>
+		<ul>
+			<li><b>General Admission:</b> $10.00</li>
+			<li><b>Concession:</b> $7.00</li>
+			<li><b>Fringe Addict:</b> $7.00</li>
+		</ul>
+		<button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location='https://fringe.co.nz/show/32124'">Book Now!</button>
+    </div>
     <div class="col-md-4">
         <h2>Promotions</h2>
         <p>
@@ -21,22 +45,15 @@
     </div>
     <div class="col-md-4">
         <h2>Top Posts</h2>
-        <p>
-            TBC - Top Posts
-        </p>
+        <div class="fb-post" data-href="https://www.facebook.com/yesterdayinspace/posts/1970608763241353:0" data-width="350" data-show-text="true"><blockquote cite="https://www.facebook.com/yesterdayinspace/posts/1970608763241353:0" class="fb-xfbml-parse-ignore"><p>TICKETS ARE ON SALE NOW!
+
+Head over to www.fringe.co.nz and search up &quot;Yesterday, In Space&quot; to book your tickets for our...</p>Posted by <a href="https://www.facebook.com/yesterdayinspace/">Yesterday, In Space</a> on&nbsp;<a href="https://www.facebook.com/yesterdayinspace/posts/1970608763241353:0">Tuesday, 18 December 2018</a></blockquote></div>
     </div>
-    <div class="col-md-4">
-        <h2>Notices</h2>
-        <p>
-            TBC - Notices & Calendar
-        </p>
-    </div>
+    
 </div>
 <div class="row">
-    <div class="col-md-5">
-        <h2>Ticket Details</h2>
-        <p>
-            TBC - Booking information
-        </p>
+	<div class="col-md-5">
+        <h2>Notices</h2>
+        <div class="fb-page" data-href="https://www.facebook.com/yesterdayinspace/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/yesterdayinspace/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/yesterdayinspace/">Yesterday, In Space</a></blockquote></div>
     </div>
 </div>
