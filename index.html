@@ -20,19 +20,19 @@
 			/* Comic Jens - a free font that we'll use until "In Space" is finished. Will probably use it for fallback if we're missing glyphs */
 			@font-face {
 				font-family: "Comic Jens";
-				src: url("/yesterdayinspace/wwwroot/fonts/comic-jens/ComicJensFreePro-Regular.ttf") format("truetype");
+				src: url("yesterdayinspace/wwwroot/fonts/comic-jens/ComicJensFreePro-Regular.ttf") format("truetype");
 			}
 				
 			/* In Space - Our font designed by Louise */
 			@font-face {
 				font-family: "In Space";
-				src: url("/yesterdayinspace/wwwroot/fonts/in-space/in-space.ttf") format("truetype");
+				src: url("yesterdayinspace/wwwroot/fonts/in-space/in-space.ttf") format("truetype");
 			}
 			
 			@font-face {
 				font-family: "In Space";
 				font-weight: bold;
-				src: url("/yesterdayinspace/wwwroot/fonts/in-space/in-space-bold.ttf") format("truetype");
+				src: url("yesterdayinspace/wwwroot/fonts/in-space/in-space-bold.ttf") format("truetype");
 			}
 
 			html {
@@ -40,12 +40,12 @@
 				height: 100%;
 				margin: 0;
 				padding: 0;
-				background: url(/yesterdayinspace/wwwroot/images/yis_background.jpg), rgb(66,2,100);
+				background: url(yesterdayinspace/wwwroot/images/yis_background.jpg), rgb(66,2,100);
 				background-size: cover;
 				background-position: center;
 				background-repeat: no-repeat;
 				background-attachment: scroll;
-				color: white;
+				color: rgb(56,32,70);
 				text-align: center;
 			}
 
@@ -63,19 +63,26 @@
 				box-sizing: border-box;
 				padding: 15px;
 				overflow-y: scroll;
-				text-shadow: 0 0 10px black;
 			}
 
 			/* Change heading and navigation fonts to "In Space", with fallbacks */
-			h1, h2, .navbar-inverse .navbar-nav > li > a, .yis-name b {
-    			font-family: "In Space", "Comic Jens", "Comic Sans MS", Arial, Helvetica, sans-serif;
-    			text-transform: uppercase;
-			}
+			h1, h2, h3, .navbar-inverse .navbar-nav > li > a, .yis-name b {
+    font-family: "In Space", "Comic Jens", "Comic Sans MS", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
 
-			h1, h2, .yis-circlesect li b {
-    			font-weight: bold;
-				text-align: center;
-			}
+h1, h2, h3, .yis-name b {
+    font-weight: bold;
+    text-shadow: 1px 0 0 currentColor;
+}
+
+h1, h2 {
+	color: white;
+}
+
+h2 {
+	padding-top: 5px;
+}
 
 			img {
 				width: 290px;
@@ -85,10 +92,88 @@
 			p {
 				font-family: Arial, Helvetica, sans-serif;
 				font-size: 20px;
-				background: rgba(66,2,100,0.29);
-				border-radius: 5px;
 				padding: 15px;
 			}
+
+			.btn {
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+margin: 0;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+padding: 10px 16px;
+font-size: 18px;
+line-height: 1.3333333;
+border-radius: 6px;
+}
+
+
+			.yis-textcont {
+    border-radius: 15px;
+	background: rgba(66,2,100,0.55);
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+	box-sizing: border-box;
+}
+
+.yis-textcont {
+	padding: 15px;
+	width: 100%;
+}
+
+#YIS-BioInfo,
+.yis-textcont p,
+.btn-primary {
+	background: rgba(255,255,255,0.95);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+.yis-textcont p {
+	/*width: 100%;*/
+	padding: 15px;
+	color: inherit;
+	text-shadow: none;
+}
+
+.btn-primary {
+	border-color: rgba(255,255,255,0.95);
+	color: inherit;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.btn-primary:hover, .btn-primary.focus, .btn-primary:focus {
+	background: rgba(255,255,255,0.85);
+	border-color: rgba(255,255,255,0.85);
+}
+
+.btn-primary:active,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.btn-primary:active:focus:hover {
+	background: rgba(255,255,255,0.85);
+	border-color: rgba(255,255,255,0.85);
+}
 
 			.yis-social {
 				display: inline-block;
@@ -97,11 +182,12 @@
 				background-size: 30px auto !important;
 				background-repeat: no-repeat !important;
 				background-position: center !important;
-				opacity: 0.9;
+				opacity: 0.95;
+				vertical-align: middle;
 			}
 
 			.yis-social:hover {
-				opacity: 1;
+				opacity: 0.85;
 				cursor: pointer;
 			}
 
@@ -112,19 +198,20 @@
     		}
 
     		.yis-yt {
-        		background-image: url(/yesterdayinspace/wwwroot/images/social_youtube.svg);
+        		background-image: url(yesterdayinspace/wwwroot/images/social_youtube.svg);
     		}
 
 			.yis-ig {
-    			background-image: url(/yesterdayinspace/wwwroot/images/social_instagram.svg);
+    			background-image: url(yesterdayinspace/wwwroot/images/social_instagram.svg);
 			}
 
 			.yis-fb {
-    			background-image: url(/yesterdayinspace/wwwroot/images/social_facebook.svg);
+				background-image: url(yesterdayinspace/wwwroot/images/social_facebook.svg);
+				margin-right: 5px;
 			}
 
 			.yis-gm {
-    			background-image: url(/yesterdayinspace/wwwroot/images/social_mail.svg);
+    			background-image: url(yesterdayinspace/wwwroot/images/social_mail.svg);
 			}
 
 			.pplBG {
@@ -134,17 +221,22 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<img src="/yesterdayinspace/wwwroot/images/yis_planet_logo_white.svg" />
-			<h1>Gryphon Theatre</h1>
-			<h2>7:30 pm 18th-20th March 2019</h2>
-			<p>Come aboard and join the crew of Yesterday for a journey... in space! Witness the comedy, drama, and relationships of Sci-Fi meeting Soap Opera in this brand-new interactive stage show! Featuring original music and songs from the members of SPLITelevision Productions, this show is taking off!</p>
-			<div class="pplBG">
+			<img src="yesterdayinspace/wwwroot/images/yis_planet_logo_white.svg" />
+			<div class="yis-textcont">
+				<h1>Gryphon Theatre</h1>
+				<h2>7:30 pm 18th-20th March 2019</h2>
 				<div class="yis-social yis-gm" title="Email Yesterday, In Space"><a href="mailto:yesterdayinspace@gmail.com"></a></div>
             	<div class="yis-social yis-yt" title="Yesterday, In Space on YouTube"><a href="http://goo.gl/hhLErK"></a></div>
             	<div class="yis-social yis-ig" title="Yesterday, In Space on Instagram"><a href="http://www.instagram.com/yesterdayinspace"></a></div>
             	<div class="yis-social yis-fb" title="Yesterday, In Space on Facebook"><a href="http://fb.me/yesterdayinspace"></a></div>
+				<button type="button" class="btn btn-primary btn-lg" onclick="window.location='https://fringe.co.nz/show/32124'">Book Now ›</button>
+				<p>Come aboard and join the crew of Yesterday for a journey... in space! Witness the comedy, drama, and relationships of Sci-Fi meeting Soap Opera in this brand-new interactive stage show! Featuring original music and songs from the members of SPLITelevision Productions, this show is taking off!</p>
+				<h2>Full website coming soon!</h2>
 			</div>
-			<h2>Full website coming soon</h2>
+			<div class="pplBG">
+				
+			</div>
+			
 		</div>
 	</body>
 </html>
