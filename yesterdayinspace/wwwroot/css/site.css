@@ -514,6 +514,7 @@ footer {
 
 .yis-charsect .yis-profile {
 	float: left;
+	pointer-events: none;
 }
 
 .yis-charsect .yis-charbio {

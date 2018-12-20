@@ -17,7 +17,7 @@
                 <img src="@(Html.DisplayFor(modelItem => item.ThumbImg))" />
             </div>
 			<div class="yis-charbio">
-				<div class="yis-name"><b>@Html.DisplayFor(modelItem => item.Name)</b> <span>@Html.DisplayFor(modelItem => item.Role)</span></div>
+				<div class="yis-name"><b>@Html.Raw(item.Name)</b> <span>@Html.Raw(item.Role)</span></div>
             	<div class="yis-bio">@Html.Raw(item.BioText)</div>
 			</div>
         </li>
