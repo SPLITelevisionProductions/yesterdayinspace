@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 namespace yesterdayinspace.Models
 {
     public class YISContext : DbContext
@@ -9,5 +9,8 @@ namespace yesterdayinspace.Models
         }
 
         public DbSet<yesterdayinspace.Models.CCEntity> CCEntity { get; set; }
+		public DbSet<yesterdayinspace.Models.APContent> APContent { get; set; }
+		public DbSet<yesterdayinspace.Models.GPContent> GPContent { get; set; }
+		public DbSet<yesterdayinspace.Models.HPContent> HPContent { get; set; }
     }
 }
