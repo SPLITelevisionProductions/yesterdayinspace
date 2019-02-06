@@ -33,7 +33,7 @@ namespace yesterdayinspace.Pages.CCEntities
             {
                 return NotFound();
             }
-            return Page();
+            return new JsonResult(CCEntity);
         }
     }
 }

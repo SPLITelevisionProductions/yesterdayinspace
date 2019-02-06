@@ -2,8 +2,8 @@
 @model GalleryModel
 @{
     ViewData["Title"] = "Gallery";
+    ViewData["OnLoad"] = "getGallery(local)";
 }
 
 <h2>@ViewData["Title"]</h2>
->> TODO
->>> We will use lightbox and store entries in db. Images will be sourced from IG or elsewhere
+<div id="Gallery"></div>
