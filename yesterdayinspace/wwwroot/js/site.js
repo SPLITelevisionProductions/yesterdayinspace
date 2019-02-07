@@ -63,11 +63,11 @@ function getEntity(id, location) {
 				if(altrole) { fn = fn + "<br />" + altrole; }
 
 				var social = "";
-				if(s1t != "none" && s1t != null) { social+= "<li><a href='" + s1u + "' target='_blank'>" + sicon(s1t) + s1d + "</a></li>" }
-				if(s2t != "none" && s2t != null) { social+= "<li><a href='" + s2u + "' target='_blank'>" + sicon(s2t) + s2d + "</a></li>" }
-				if(s3t != "none" && s3t != null) { social+= "<li><a href='" + s3u + "' target='_blank'>" + sicon(s3t) + s3d + "</a></li>" }
-				if(s4t != "none" && s4t != null) { social+= "<li><a href='" + s4u + "' target='_blank'>" + sicon(s4t) + s4d + "</a></li>" }
-				if(s5t != "none" && s5t != null) { social+= "<li><a href='" + s5u + "' target='_blank'>" + sicon(s5t) + s5d + "</a></li>" }
+				if(s1t != "none" && s1t != null) { social+= "<li><a href='" + s1u + "'>" + sicon(s1t) + s1d + "</a></li>" }
+				if(s2t != "none" && s2t != null) { social+= "<li><a href='" + s2u + "'>" + sicon(s2t) + s2d + "</a></li>" }
+				if(s3t != "none" && s3t != null) { social+= "<li><a href='" + s3u + "'>" + sicon(s3t) + s3d + "</a></li>" }
+				if(s4t != "none" && s4t != null) { social+= "<li><a href='" + s4u + "'>" + sicon(s4t) + s4d + "</a></li>" }
+				if(s5t != "none" && s5t != null) { social+= "<li><a href='" + s5u + "'>" + sicon(s5t) + s5d + "</a></li>" }
 
                 $('#YIS-BioFullImg').attr('src', img);
                 $('#YIS-BioName').html(fn);
@@ -84,47 +84,39 @@ function sicon(type) {
 	var svg;
 	switch (type) {
 		case 'facebook':
-			svg = '<svg viewBox="0 0 257.71679 257.71876" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_facebook.svg#Blue_1_"></use></svg>';
+			svg = '<svg viewBox="0 0 257.71679 257.71876" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_facebook.svg#Blue_1_"></use></svg>';
 			break;
 
 		case 'instagram':
-			svg = '<svg viewBox="0 0 95.999002 96" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_instagram.svg#path4177"></use></svg>';
+			svg = '<svg viewBox="0 0 95.999002 96" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_instagram.svg#path4177"></use></svg>';
 			break;
 
 		case 'twitter':
-			svg = '<svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_twitter.svg#path10"></use></svg>';
+			svg = '<svg viewBox="0 0 250 250" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_twitter.svg#path10"></use></svg>';
 			break;
 
 		case 'starnow':
-			svg = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_starnow.svg#path22"></use></svg>';
+			svg = '<svg viewBox="0 0 100 100" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_starnow.svg#path22"></use></svg>';
 			break;
 
 		case 'tumblr':
-			svg = '<svg viewBox="0 0 160.00001 160" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_tumblr.svg#path78"></use></svg>';
+			svg = '<svg viewBox="0 0 160.00001 160" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_tumblr.svg#path78"></use></svg>';
 			break;
 
 		case 'wellingtonista':
-			svg = '<svg viewBox="0 0 52.916665 52.916668" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_wellingtonista.svg#layer1"></use></svg>';
+			svg = '<svg viewBox="0 0 52.916665 52.916668" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_wellingtonista.svg#layer1"></use></svg>';
 			break;
 
 		case 'linkedin':
-			svg = '<svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_linkedin.svg#path26"></use></svg>';
+			svg = '<svg viewBox="0 0 36 36" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_linkedin.svg#path26"></use></svg>';
 			break;
 
 		case 'behance':
-			svg = '<svg viewBox="0 0 599.99999 600" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_behance.svg#rect23"></use></svg>';
+			svg = '<svg viewBox="0 0 599.99999 600" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_behance.svg#rect23"></use></svg>';
 			break;
 
 		case 'github':
-			svg = '<svg viewBox="0 0 11.493064 11.209466" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_github.svg#path102"></use></svg>';
-			break;
-
-		case 'youtube':
-			svg = '<svg viewBox="0 0 121.4009 85" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_youtube.svg#path4732"></use></svg>';
-			break;
-
-		case 'web':
-			svg = '<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_web.svg#path4756"></use></svg>';
+			svg = '<svg viewBox="0 0 599.99999 600" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_behance.svg#rect23"></use></svg>';
 			break;
 	
 		default:
@@ -158,8 +150,8 @@ function listCC(location) {
 
                 $('#YIS-BioFullImg').attr('src', img);
                 $('#YIS-BioName').html(fn);
-				$('#YIS-BioInfo').html(bio);
-			});
+                $('#YIS-BioInfo').html(bio);
+            });
 		})
 		.fail(function(json) {
             getEntity(id, local);
@@ -185,31 +177,81 @@ function getAbout(location) {
 		.fail(function(json) {
             getAbout(local);
 		});
+
+    
 }
 
-function getGallery(location) {
+function getHome(location) {
 
-    var url = location + 'GetGallery';
+	var url = location + 'GetHome';
 
-    var query = {};
-    
+	console.log("Getting List");
+    var query = {
+        list: true
+    };
+
     $.getJSON(url, query)
         .done(function(json) {
-			var items = [];
-            $.each( json, function( key, val ) {
-                // Pull data from the JSON into shorter variables
-                var thumburl = json[key]["thumbURL"];
-				var url = json[key]["url"];
-				var caption = json[key]["caption"];
-				
-				item = "<a href='" + url + "' data-fancybox='gallery' data-caption='" + caption + "' title='" + caption + "'>" +
-						"<img src='" + thumburl + "' /></a>";
+			console.log("Got item listing ->"); console.log(json);
+			var itemsPromo = [];
+			var itemsTop = [];
+			var itemsNotice = [];
+			$.each( json, function( key, val ) {
+				// Pull data from the JSON into shorter variables
+				var id = json[key]["id"];
+				var ti = json[key]["title"];
+				var cp = json[key]["caption"];
+				var sc = json[key]["section"];
+				var so = json[key]["social"];
+				var ur = json[key]["url"];
+				var th = json[key]["thumb"];
 
-				items.push(item);
+				var loc = "window.location='" + ur + "'";
+
+				switch (sc) {
+					case 'promo':
+						item = '<li onclick="' + loc + '" class="hp-promo">' +
+							"<div class='promo-img' style='background-image: url(" + th + ")'></div>" +
+							"<div class='promo-li'>" + sicon(so) +
+							"<span>" + ti + "</span>" +
+							"<span>›</span>" +
+							"</div></li>";
+						itemsPromo.push(item);
+						break;
+			
+					case 'top':
+						item = '<li onclick="' + loc + '">' +
+							sicon(so) +
+							"<span>" + ti + "</span>" +
+							"<span>›</span>" +
+							"</li>";
+						itemsTop.push(item);
+						break;
+			
+					case 'notice':
+						item = '<li onclick="' + loc + '">' +
+							sicon(so) +
+							"<span>" + ti + "</span>" +
+							"<span>›</span>" +
+							"</li>";
+						itemsNotice.push(item);
+						break;
+				
+					default:
+						break;
+				}
+
+				console.log("Pushed item " + id);
 			});
-			$('#Gallery').html(items.join( "" ));
-		})
-		.fail(function(json) {
-            getGallery(id, local);
-		});
+			
+			$('#HP-Promos').html(itemsPromo.join( "" ));
+			$('#HP-Top').html(itemsTop.join( "" ));
+			$('#HP-Notices').html(itemsNotice.join( "" ));
+			console.log("Printed items to page");
+        })
+        .fail(function(error) {
+			console.log("Failed to retrieve list ->");
+			console.log(error);
+			console.log("Was returned by AJAX");
+    });
 }
