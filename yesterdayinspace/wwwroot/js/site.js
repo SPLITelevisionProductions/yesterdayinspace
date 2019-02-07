@@ -210,7 +210,7 @@ function getHome(location) {
 
 				switch (sc) {
 					case 'promo':
-						item = '<li onclick="' + loc + '" class="hp-promo">' +
+						item = '<li onclick="' + loc + '" class="hp-promo" title="' + cp + '">' +
 							"<div class='promo-img' style='background-image: url(" + th + ")'></div>" +
 							"<div class='promo-li'>" + sicon(so) +
 							"<span>" + ti + "</span>" +
@@ -220,7 +220,7 @@ function getHome(location) {
 						break;
 			
 					case 'top':
-						item = '<li onclick="' + loc + '">' +
+						item = '<li onclick="' + loc + '" title="' + cp + '">' +
 							sicon(so) +
 							"<span>" + ti + "</span>" +
 							"<span>›</span>" +
@@ -229,7 +229,7 @@ function getHome(location) {
 						break;
 			
 					case 'notice':
-						item = '<li onclick="' + loc + '">' +
+						item = '<li onclick="' + loc + '" title="' + cp + '">' +
 							sicon(so) +
 							"<span>" + ti + "</span>" +
 							"<span>›</span>" +
