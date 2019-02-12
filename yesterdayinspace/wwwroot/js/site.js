@@ -255,3 +255,30 @@ function getHome(location) {
 			console.log("Was returned by AJAX");
     });
 }
+
+function getGallery(location) {
+
+    var url = location + 'GetGallery';
+
+    var query = {};
+
+    $.getJSON(url, query)
+        .done(function(json) {
+			var items = [];
+            $.each( json, function( key, val ) {
+                // Pull data from the JSON into shorter variables
+                var thumburl = json[key]["thumbURL"];
+				var url = json[key]["url"];
+				var caption = json[key]["caption"];
+
+				item = "<a href='" + url + "' data-fancybox='gallery' data-caption='" + caption + "' title='" + caption + "'>" +
+						"<img src='" + thumburl + "' /></a>";
+
+				items.push(item);
+			});
+			$('#Gallery').html(items.join( "" ));
+		})
+		.fail(function(json) {
+            getGallery(id, local);
+		});
+}
