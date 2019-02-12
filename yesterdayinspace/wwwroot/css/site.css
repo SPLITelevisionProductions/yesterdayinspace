@@ -576,16 +576,19 @@ footer {
 .yis-hpcont {
 	margin-left: -15px;
 	margin-right: -15px;
-	padding-top: 15px;
+    padding-top: 15px;
+    text-align: center;
 }
 
 .yis-hpcont > div {
 	display: inline-block;
 	height: 480px;
 	width: 288px;
-	padding: 15px;
+    padding: 15px;
+    vertical-align: top;
 	box-sizing: border-box;
-	overflow-y: hidden;
+    overflow-y: hidden;
+    text-align: initial;
 }
 
 .yis-hpcont div h2 {
