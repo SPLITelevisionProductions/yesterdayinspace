@@ -457,6 +457,11 @@ footer {
 
 .yis-bioimg .yis-name {
 	font-size: 1.2em;
+	padding: 0px 10px 0px 10px;
+}
+
+.yis-bioimg .yis-name .altrole {
+	font-size: 0.9em;
 }
 
 #YIS-BioInfo {

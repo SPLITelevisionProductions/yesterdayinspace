@@ -60,7 +60,7 @@ function getEntity(id, location) {
                 fn = "<b>" + name + "</b>";
 
 				if(role) { fn = fn + "<br />" + role; }
-				if(altrole) { fn = fn + "<br />" + altrole; }
+				if(altrole) { fn = fn + "<br /><span class='altrole'>" + altrole + "</span>"; }
 
 				var social = "";
 				if(s1t != "none" && s1t != null) { social+= "<li><a href='" + s1u + "'>" + sicon(s1t) + s1d + "</a></li>" }
@@ -117,6 +117,14 @@ function sicon(type) {
 
 		case 'github':
 			svg = '<svg viewBox="0 0 599.99999 600" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_behance.svg#rect23"></use></svg>';
+			break;
+
+		case 'youtube':
+			svg = '<svg viewBox="0 0 121.4009 85" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_youtube.svg#path4732"></use></svg>';
+			break;
+
+		case 'web':
+			svg = '<svg viewBox="0 0 20 20" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_web.svg#path4756"></use></svg>';
 			break;
 	
 		default:
