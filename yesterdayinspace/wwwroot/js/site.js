@@ -84,47 +84,47 @@ function sicon(type) {
 	var svg;
 	switch (type) {
 		case 'facebook':
-			svg = '<svg viewBox="0 0 257.71679 257.71876" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_facebook.svg#Blue_1_"></use></svg>';
+			svg = '<svg viewBox="0 0 257.71679 257.71876" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/facebook.svg#Blue_1_"></use></svg>';
 			break;
 
 		case 'instagram':
-			svg = '<svg viewBox="0 0 95.999002 96" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_instagram.svg#path4177"></use></svg>';
+			svg = '<svg viewBox="0 0 95.999002 96" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/instagram.svg#path4177"></use></svg>';
 			break;
 
 		case 'twitter':
-			svg = '<svg viewBox="0 0 250 250" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_twitter.svg#path10"></use></svg>';
+			svg = '<svg viewBox="0 0 250 250" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/twitter.svg#path10"></use></svg>';
 			break;
 
 		case 'starnow':
-			svg = '<svg viewBox="0 0 100 100" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_starnow.svg#path22"></use></svg>';
+			svg = '<svg viewBox="0 0 100 100" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/starnow.svg#path22"></use></svg>';
 			break;
 
 		case 'tumblr':
-			svg = '<svg viewBox="0 0 160.00001 160" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_tumblr.svg#path78"></use></svg>';
+			svg = '<svg viewBox="0 0 160.00001 160" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/tumblr.svg#path78"></use></svg>';
 			break;
 
 		case 'wellingtonista':
-			svg = '<svg viewBox="0 0 52.916665 52.916668" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_wellingtonista.svg#layer1"></use></svg>';
+			svg = '<svg viewBox="0 0 52.916665 52.916668" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/wellingtonista.svg#layer1"></use></svg>';
 			break;
 
 		case 'linkedin':
-			svg = '<svg viewBox="0 0 36 36" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_linkedin.svg#path26"></use></svg>';
+			svg = '<svg viewBox="0 0 36 36" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/linkedin.svg#path26"></use></svg>';
 			break;
 
 		case 'behance':
-			svg = '<svg viewBox="0 0 599.99999 600" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_behance.svg#rect23"></use></svg>';
+			svg = '<svg viewBox="0 0 599.99999 600" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/behance.svg#rect23"></use></svg>';
 			break;
 
 		case 'github':
-			svg = '<svg viewBox="0 0 599.99999 600" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_behance.svg#rect23"></use></svg>';
+			svg = '<svg viewBox="0 0 11.493064 11.209466" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/github.svg#path102"></use></svg>';
 			break;
 
 		case 'youtube':
-			svg = '<svg viewBox="0 0 121.4009 85" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_youtube.svg#path4732"></use></svg>';
+			svg = '<svg viewBox="0 0 121.4009 85" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/youtube.svg#path4732"></use></svg>';
 			break;
 
 		case 'web':
-			svg = '<svg viewBox="0 0 20 20" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/bio_web.svg#path4756"></use></svg>';
+			svg = '<svg viewBox="0 0 20 20" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/web.svg#path4756"></use></svg>';
 			break;
 	
 		default:
@@ -164,29 +164,6 @@ function listCC(location) {
 		.fail(function(json) {
             getEntity(id, local);
 		});
-}
-
-function getAbout(location) {
-
-    var url = location + 'GetAP';
-
-    var query = {view: 1};
-    
-    $.getJSON(url, query)
-        .done(function(json) {
-            $.each( json, function( key, val ) {
-                // Pull data from the JSON into shorter variables
-                console.log("Got item listing ->"); console.log(json);
-                var content = json["content"] + "<hr />";
-
-                $('.body-content').html(content);
-            });
-		})
-		.fail(function(json) {
-            getAbout(local);
-		});
-
-    
 }
 
 function getHome(location) {

@@ -84,13 +84,13 @@
         </div>
     </nav>
     <partial name="_CookieConsentPartial" />
+	<div id="YISHome-BG"></div>
     <div class="container body-content">
         @RenderBody()
         <hr />
     </div>
 	<footer>
-        <p>&copy; @DateTime.Now.Year SPLITelevision Productions</p>
-		<div class="footer-third">
+		<!--<div class="footer-third">
 			<a href="http://fb.me/SPLITelevision" title="SPLITelevision Productions">
 				<img src="/images/split_logo.svg" />
 			</a>
@@ -104,8 +104,17 @@
 			<a href="http://www.fringe.co.nz/" title="NZ Fringe Festival, Wellington 2019">
 				<img src="/images/fringe_logo_pink.svg" />
 			</a>
-		</div>
-    </footer>
+		</div>-->
+		<!-- Now need 7 logos -->
+		<div class="footer-logo dw" id="YISFoot-SPLIT" onclick="window.location.assign('https://www.facebook.com/SPLITelevision/')" title="SPLITelevision Productions"></div>
+		<div class="footer-logo dw" id="YISFoot-FatG" onclick="window.location.assign('https://fatg.org.nz/')" title="Fringe at the Gryphon"></div>
+		<div class="footer-logo" id="YISFoot-Menag" onclick="window.location.assign('https://themenagerie.co.nz/')" title="The Menagerie Variety Show"></div>
+		<div class="footer-logo dw" id="YISFoot-CNZ" onclick="window.location.assign('http://www.creativenz.govt.nz/')" title="Creative NZ"></div>
+		<div class="footer-logo" id="YISFoot-Tempst" onclick="window.location.assign('https://www.facebook.com/tempestwellington/')" title="Tempest Theatre Co"></div>
+		<div class="footer-logo dw" id="YISFoot-Gryph" onclick="window.location.assign('http://gryphon.stagecraft.co.nz/')" title="Gryphon Theatre"></div>
+		<div class="footer-logo dw" id="YISFoot-Fringe" onclick="window.location.assign('https://fringe.co.nz/')" title="Fringe"></div>
+		<p>&copy; @DateTime.Now.Year SPLITelevision Productions</p>
+	</footer>
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>

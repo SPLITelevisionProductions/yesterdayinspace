@@ -1,8 +1,14 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
 for details on configuring this project to bundle and minify static web assets. */
+
 body {
     padding-top: 50px;
-    color: rgb(56,32,70);
+	color: rgb(56,32,70);
+}
+
+body.newhome {
+	background: transparent;
+	color: white;
 }
 
 /* Font Includes */
@@ -87,6 +93,17 @@ h1, h2, h3, .navbar-inverse .navbar-nav > li > a, .yis-name b {
 h1, h2, h3, .yis-name b {
     font-weight: bold;
     text-shadow: 1px 0 0 currentColor;
+}
+
+.newhome h2 {
+	text-align: center;
+    line-height: 1.3em;
+	text-shadow: 0 2px 5px black;
+}
+
+.newhome h1 {
+	text-align: center;
+	text-shadow: 0 2px 5px black;
 }
 
 b {
@@ -211,37 +228,8 @@ a {
 	margin-top: 0;
 }
 
-.yis-promo {
-	text-align: center;
-	width: calc(100% + 30px);
-	box-sizing: border-box;
-	height: auto;
-	margin-left: -15px;
-	margin-right: -15px;
-	padding: 15px;
-	background-image: url(/images/yis_background.jpg);
-	background-color: rgb(46, 18, 61);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-    border-radius: 0 0 10px 10px;
-}
-
-.yis-promo h1, .yis-promo h2 {
-	color: white;
-}
-
-.yis-promo img {
-	width: 320px;
-	height: auto;
-}
-
-.yis-promo p {
-	font-size: 20px;
-}
-
 footer {
-	height: 155px;
+	height: auto;
 	width: 100%;
 	text-align: center;
 	background:
@@ -250,6 +238,22 @@ footer {
 	background-size: auto 125px;
 }
 
+.newhome footer {
+	background: rgba(6,2,62, 0.5);
+	color: white;
+}
+
+footer p {
+	width: 100%;
+	padding: 10px 0 10px 0;
+	margin: 0;
+}
+
+.newhome hr {
+	display: none;
+}
+
+/* Original Thirds */
 .footer-third {
 	width: calc(100% / 3);
 	height: 125px;
@@ -270,6 +274,210 @@ footer {
 .footer-third:nth-child(2) img {
 	height: 70px;
 	margin-top: 28px;
+}
+
+/* New Twelfths */
+
+.footer-logo {
+	/*width: calc(100% / 12);*/
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin: 0 5px 0 5px;
+	/*float: left;*/
+	background-size: contain !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.footer-logo:hover {
+	opacity: 1;
+}
+
+.footer-logo.dw {
+	/*width: calc(100% / 6);*/
+	width: 200px;
+}
+
+/* Footer Logos */
+#YISFoot-SPLIT {
+	background-image: url(/images/footlinks/split_c.svg);
+}
+
+#YISFoot-FatG {
+	background-image: url(/images/footlinks/fatg_c.svg);
+}
+
+#YISFoot-Menag {
+	background-image: url(/images/footlinks/menag_c.svg);
+}
+
+#YISFoot-CNZ {
+	background-image: url(/images/footlinks/cnz_c.svg);
+}
+
+#YISFoot-Tempst {
+	background-image: url(/images/footlinks/temp_c.svg);
+}
+
+#YISFoot-Gryph {
+	background-image: url(/images/footlinks/gryph_c.svg);
+}
+
+#YISFoot-Fringe {
+	background-image: url(/images/footlinks/fringe_c.svg);
+}
+
+/*-Home*/
+
+.newhome #YISFoot-SPLIT {
+	background-image: url(/images/footlinks/split.svg);
+}
+
+.newhome #YISFoot-FatG {
+	background-image: url(/images/footlinks/fatg.svg);
+}
+
+.newhome #YISFoot-Menag {
+	background-image: url(/images/footlinks/menag.svg);
+}
+
+.newhome #YISFoot-CNZ {
+	background-image: url(/images/footlinks/cnz.svg);
+}
+
+.newhome #YISFoot-Tempst {
+	background-image: url(/images/footlinks/temp.svg);
+}
+
+.newhome #YISFoot-Gryph {
+	background-image: url(/images/footlinks/gryph.svg);
+}
+
+.newhome #YISFoot-Fringe {
+	background-image: url(/images/footlinks/fringe.svg);
+}
+
+/*-*/
+
+#YISHome-BG {
+	display: none;
+}
+
+.newhome #YISHome-BG {
+	display: block;
+	z-index: -1000;
+	background: url(/images/yis_background_hp.jpg) no-repeat center;
+	background-size: cover;
+	position: fixed;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	transform-origin: center;
+	transform: scale(1);
+	animation-name: HPBG;
+	animation-duration: 180s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes HPBG {
+	0%   {transform: scale(1);}
+	50% {transform: scale(1.2);}
+	100% {transform: scale(1);}
+}
+
+#YISHome-Presents {
+	height: 120px;
+	width: 100%;
+	background: url(/images/hp_stpresents.svg) no-repeat center;
+	background-size: auto 100%;
+	position: absolute;
+	left: 0;
+}
+
+#YISHome-Logo {
+	height: 460px;
+	width: 100%;
+	margin-top: 0px;
+	background: url(/images/yis_planet_logo_white.svg) no-repeat center;
+	background-size: contain;
+	z-index: -1;
+}
+
+#YISHome-Subtitle {
+	margin-top: -90px;
+}
+
+#YISHome-Ship, #YISHome-Ship-Rev {
+	display: block;
+	pointer-events: none;
+	width: 100%;
+	height: 200px;
+	background: url(/images/hp_ship.png) no-repeat center;
+	background-size: auto 50%;
+	background-position-x: calc(100% + 500px);
+	background-position-y: center;
+	z-index: 0;
+	position: absolute;
+	left: 0;
+	animation-name: HPShip;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+#YISHome-Ship-Rev {
+	background: url(/images/hp_ship_rev.png) no-repeat center;
+	background-size: auto 100%;
+	background-position-x: calc(100% + 500px);
+	background-position-y: center;
+	transform: scaleX(-1);
+	animation-name: HPShip;
+	animation-duration: 60s;
+	animation-delay: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes HPShip {
+	0%   {background-position-x: calc(100% + 500px);}
+	50% {background-position-x: -500px;}
+	100% {background-position-x: -500px;}
+}
+
+#YISHome-FakeShip {
+	width: 100%;
+	height: 200px;
+	pointer-events: none;
+}
+
+#YISHome-Desc p {
+	text-align: justify;
+    text-shadow: 0 2px 2px black;
+	background: rgba(6,2,62, 0.5);
+	border: 1px solid rgba(6,2,62, 0.2);
+	box-sizing: border-box;
+    padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+#YISHome-Desc {
+	margin-bottom: 25px;
+}
+
+#YISHome-Deets {
+	text-align: center;
+	padding-bottom: 15px;
 }
 
 .yis-social {
@@ -323,7 +531,8 @@ footer {
 .yis-circlesect {
     text-align: center;
     width: calc(100% + 30px);
-    margin-left: -15px;
+	margin-left: -15px;
+	padding-bottom: 15px;
 }
 
     .yis-circlesect li {
@@ -387,7 +596,6 @@ footer {
     background-size: cover;
 }
 
-.yis-promo .yis-textcont,
 .yis-bioimg {
     border-radius: 15px;
 	background: rgba(66,2,100,0.55);
@@ -396,43 +604,37 @@ footer {
 	box-sizing: border-box;
 }
 
-.yis-promo .yis-textcont {
-	padding: 15px;
-	width: 100%;
-}
-
 #YIS-BioInfo,
-.yis-promo .yis-textcont p,
-.yis-promo .btn-primary {
+.newhome .btn-primary {
 	background: rgba(255,255,255,0.95);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
     border-radius: 15px;
 }
 
-.yis-promo .yis-textcont p {
-	width: 100%;
-	padding: 15px;
-	color: inherit;
-	text-shadow: none;
+.newhome .btn-primary {
+	border-radius: 23px;
+	color: rgb(56, 32, 70) !important;
 }
 
-.yis-promo .btn-primary {
+.newhome .btn-primary {
 	border-color: rgba(255,255,255,0.95);
 	color: inherit;
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
 
-.yis-promo .btn-primary:hover, .yis-promo .btn-primary.focus, .yis-promo .btn-primary:focus {
+.newhome .btn-primary:hover,
+.newhome .btn-primary.focus,
+.newhome .btn-primary:focus {
 	background: rgba(255,255,255,0.85);
 	border-color: rgba(255,255,255,0.85);
 }
 
-.yis-promo .btn-primary:active,
-.yis-promo .btn-primary:active:focus,
-.yis-promo .btn-primary:active:hover,
-.yis-promo .btn-primary:active:focus:hover {
+.newhome .btn-primary:active,
+.newhome .btn-primary:active:focus,
+.newhome .btn-primary:active:hover,
+.newhome .btn-primary:active:focus:hover {
 	background: rgba(255,255,255,0.85);
 	border-color: rgba(255,255,255,0.85);
 }
@@ -578,39 +780,6 @@ footer {
 	float: left;
 }
 
-.yis-hpcont {
-	margin-left: -15px;
-	margin-right: -15px;
-    padding-top: 15px;
-    text-align: center;
-}
-
-.yis-hpcont > div {
-	display: inline-block;
-	height: 480px;
-	width: 288px;
-    padding: 15px;
-    vertical-align: top;
-	box-sizing: border-box;
-    overflow-y: hidden;
-    text-align: initial;
-}
-
-.yis-hpcont div h2 {
-	padding-left: 15px;
-	padding-right: 15px;
-	margin-bottom: 15px;
-	text-align: center;
-}
-
-.yis-hpcont div ul.blocklinks {
-	display: block;
-	height: calc(100% - 59px);
-	overflow-y: auto;
-	list-style: none;
-	padding: 0;
-}
-
 ul.blocklinks li {
     height: 35px;
     box-sizing: border-box;
@@ -672,19 +841,6 @@ ul.blocklinks .promo-img {
 	border-top-right-radius: 5px;
 }
 
-ul.blocklinks .promo-li {
-	padding-left: 10px;
-	box-sizing: border-box;
-}
-
-.yis-hpcont div#HP-Tickets {
-	padding: 15px;
-}
-
-.yis-hpcont div#HP-Tickets h2 {
-	padding: 0;
-}
-
 #Gallery {
     text-align: center;
 }
@@ -702,19 +858,37 @@ ul.blocklinks .promo-li {
 }
 
     @media (max-width: 540px) {
-        .yis-promo img {
-            width: 290px;
-        }
 
         .footer-third {
             width: 100%;
             float: initial;
-        }
+		}
+
+		.footer-logo {
+			height: 80px;
+			width: 80px;
+		}
+
+		.footer-logo.dw {
+			width: 150px;
+		}
+
+		#YISHome-Presents {
+			margin-top: 20px;
+			height: 100px;
+		}
+
+		.newhome h1 {
+			font-size: 2.3em;
+		}
+
+		.newhome h2 {
+			font-size: 1.4em;
+		}
 
         footer {
-            height: calc((125px * 3) + 30px);
             background: url(/images/yis_foot_stars.svg) -50px bottom no-repeat, url(/images/yis_foot_planet.svg) calc(100% + 50px) bottom no-repeat;
-            background-size: auto 125px;
+			background-size: auto 125px;
         }
     }
 
@@ -749,18 +923,6 @@ ul.blocklinks .promo-li {
     }
     /* Hide/rearrange for smaller screens */
     @media screen and (max-width: 767px) {
-		.yis-hpcont > div {
-			height: auto;
-			width: 100%;
-			overflow-y: visible;
-			padding: 15px !important;
-		}
-
-		.yis-hpcont div ul.blocklinks {
-			display: block;
-			height: auto;
-			overflow-y: visible;
-		}
 
         /* Hide captions */
         .carousel-caption {
