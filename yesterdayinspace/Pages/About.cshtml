@@ -1,6 +1,10 @@
 @page
-@model AboutModel
+@model yesterdayinspace.Pages.APContents.APContentsModel
 @{
     ViewData["Title"] = "About Us";
-    ViewData["OnLoad"] = "getAbout(local)";
 }
+
+@foreach (var item in Model.APContent)
+    {
+		@Html.Raw(item.Content)
+	}
