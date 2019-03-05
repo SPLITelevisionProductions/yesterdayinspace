@@ -196,6 +196,10 @@ body.home .yis-header {
     padding-left: 0;
 }
 
+body.webapp > .navbar-fixed-top {
+	padding-top: 20px;
+}
+
 /* Make the home link... nicer */
 .navbar-fixed-top .navbar-brand {
     background-image: url(/images/yis_nav.svg);
@@ -568,7 +572,8 @@ footer p {
         border-radius: 50%;
         box-sizing: border-box;
         border: 1px solid rgba(66,2,100,0.29);
-        background-color: white;
+		background-color: white;
+		transition: all .10s ease-in-out;
     }
 
     .yis-profile:hover img {
@@ -854,7 +859,14 @@ ul.blocklinks .promo-img {
 
 #Gallery a img {
     height: 150px;
-    width: auto;
+	width: auto;
+	opacity: 0.8;
+	border-radius: 5px;
+	transition: all .15s ease-in-out;
+}
+
+#Gallery a img:hover {
+	opacity: 1;
 }
 
     @media (max-width: 540px) {
@@ -960,6 +972,11 @@ ul.blocklinks .promo-img {
 			pointer-events: all;
 		}
 
+		body.webapp #YIS-BioPane {
+			top: 20px;
+			height: calc(100% - 20px);
+		}
+
 		.yis-bioimg {
 			width: 100%;
     		height: auto;
@@ -980,5 +997,9 @@ ul.blocklinks .promo-img {
 			right: 5px;
 			border-radius: 50%;
 			background-color: rgba(66,2,100,0.9);
+		}
+
+		body.webapp .yis-close {
+			top: 25px;
 		}
     }

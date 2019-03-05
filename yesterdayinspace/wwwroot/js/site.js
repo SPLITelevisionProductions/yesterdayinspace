@@ -1,30 +1,33 @@
 // Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
+// These were originally going to be used for everything, but
+// now I'm just relegating it to the Gallery
 const local = "/";
-const remote = "https://yis.lga.nz:40443/rdb/";
+const remote = "https://www.lga.nz:40443/services/STPYIS/remote/";
 
 // Shamelessly taken from librarium-sqlite
 $(document).ready(function() {
+	// If we are launched standalone (i.e. in web-app mode), add
+	// a class to our body element to add some extra space to the
+	// navigation bar/header
+	if (window.navigator.standalone == true) {
+		$('body').addClass('webapp');
+	}
     // We can basically use this code on any circle-section as
     // the attributes are mostly the same. Checks are done in showBio()
     $(".yis-circlesect").on("click","li", function(event){
         event.preventDefault();
-        //name = $(this).attr('data-name');
-        //char = $(this).attr('data-charname');
-        //img = $(this).attr('data-fullimg');
-        //bio = $(this).attr('data-bio');
-        //showBio(name, char, img, bio);
         var id = $(this).attr('data-id');
         console.log(id);
-        getEntity(id, local);
+        getEntity(id);
         $('#YIS-BioPane').fadeIn();
     });
 });
 
-function getEntity(id, location) {
+function getEntity(id) {
 
-    var url = location + 'GetCC';
+    var url = '/GetCC';
 
     var query = {id: id};
     console.log(query);
@@ -76,7 +79,7 @@ function getEntity(id, location) {
             });
 		})
 		.fail(function(json) {
-            getEntity(id, local);
+            alert("Sorry, we're having problems retrieving the Cast, Crew, and Characters data. Please try again later.");
 		});
 }
 
@@ -133,9 +136,9 @@ function sicon(type) {
 	return svg;
 }
 
-function listCC(location) {
+function listCC() {
 
-    var url = location + 'GetEntity';
+    var url = '/GetEntity';
 
     var query = {};
     
@@ -162,83 +165,8 @@ function listCC(location) {
             });
 		})
 		.fail(function(json) {
-            getEntity(id, local);
+            alert("Sorry, we're having problems retrieving the Cast & Crew data. Please try again later.");
 		});
-}
-
-function getHome(location) {
-
-	var url = location + 'GetHome';
-
-	console.log("Getting List");
-    var query = {
-        list: true
-    };
-
-    $.getJSON(url, query)
-        .done(function(json) {
-			console.log("Got item listing ->"); console.log(json);
-			var itemsPromo = [];
-			var itemsTop = [];
-			var itemsNotice = [];
-			$.each( json, function( key, val ) {
-				// Pull data from the JSON into shorter variables
-				var id = json[key]["id"];
-				var ti = json[key]["title"];
-				var cp = json[key]["caption"];
-				var sc = json[key]["section"];
-				var so = json[key]["social"];
-				var ur = json[key]["url"];
-				var th = json[key]["thumb"];
-
-				var loc = "window.location='" + ur + "'";
-
-				switch (sc) {
-					case 'promo':
-						item = '<li onclick="' + loc + '" class="hp-promo" title="' + cp + '">' +
-							"<div class='promo-img' style='background-image: url(" + th + ")'></div>" +
-							"<div class='promo-li'>" + sicon(so) +
-							"<span>" + ti + "</span>" +
-							"<span>›</span>" +
-							"</div></li>";
-						itemsPromo.push(item);
-						break;
-			
-					case 'top':
-						item = '<li onclick="' + loc + '" title="' + cp + '">' +
-							sicon(so) +
-							"<span>" + ti + "</span>" +
-							"<span>›</span>" +
-							"</li>";
-						itemsTop.push(item);
-						break;
-			
-					case 'notice':
-						item = '<li onclick="' + loc + '" title="' + cp + '">' +
-							sicon(so) +
-							"<span>" + ti + "</span>" +
-							"<span>›</span>" +
-							"</li>";
-						itemsNotice.push(item);
-						break;
-				
-					default:
-						break;
-				}
-
-				console.log("Pushed item " + id);
-			});
-			
-			$('#HP-Promos').html(itemsPromo.join( "" ));
-			$('#HP-Top').html(itemsTop.join( "" ));
-			$('#HP-Notices').html(itemsNotice.join( "" ));
-			console.log("Printed items to page");
-        })
-        .fail(function(error) {
-			console.log("Failed to retrieve list ->");
-			console.log(error);
-			console.log("Was returned by AJAX");
-    });
 }
 
 function getGallery(location) {
@@ -264,6 +192,8 @@ function getGallery(location) {
 			$('#Gallery').html(items.join( "" ));
 		})
 		.fail(function(json) {
-            getGallery(id, local);
+			console.log(json);
+			getGallery(local);
+			alert("Sorry, we're having problems connecting to the remote server for the latest Gallery data. Local data has been loaded instead");
 		});
 }

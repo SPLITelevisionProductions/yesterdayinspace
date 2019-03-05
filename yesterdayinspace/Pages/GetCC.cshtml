@@ -1,20 +1,5 @@
 @page
 @model yesterdayinspace.Pages.CCEntities.GetEntityModel
 @{
-    Layout = null;
-
-    Response.ContentType = "application/json";
-
-	string bio = Model.CCEntity.BioText.Replace("\"","'").Replace("\r", "").Replace("\n", "").Trim();
-
-    // When C# can't encode a small bit of JSON itself, just do it yourself
-
+	
 }
-
-[{
-    "name":"@Html.Raw(Model.CCEntity.Name)",
-    "role":"@Html.Raw(Model.CCEntity.Role)",
-	"altrole":"@Html.Raw(Model.CCEntity.AltRole)",
-    "image":"@Html.Raw(Model.CCEntity.BioImg)",
-    "bio":"@Html.Raw(bio)"
-}]
