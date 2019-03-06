@@ -122,12 +122,20 @@ function sicon(type) {
 			svg = '<svg viewBox="0 0 11.493064 11.209466" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/github.svg#path102"></use></svg>';
 			break;
 
+		case 'soundcloud':
+			svg = '<svg viewBox="0 0 11.493064 11.209466" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/soundcloud.svg#path15"></use></svg>';
+			break;
+
 		case 'youtube':
 			svg = '<svg viewBox="0 0 121.4009 85" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/youtube.svg#path4732"></use></svg>';
 			break;
 
 		case 'web':
 			svg = '<svg viewBox="0 0 20 20" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/web.svg#path4756"></use></svg>';
+			break;
+
+		case 'artstation':
+			svg = '<svg viewBox="0 0 11.493064 11.209466" style="width: 20px; height: 20px; vertical-align: middle; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><use xlink:href="/images/biolinks/artstation.svg#path4"></use></svg>';
 			break;
 	
 		default:
