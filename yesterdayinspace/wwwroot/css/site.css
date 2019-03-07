@@ -11,6 +11,10 @@ body.newhome {
 	color: white;
 }
 
+body.webapp {
+	padding-top: calc(50px + env(safe-area-inset-top));
+}
+
 /* Font Includes */
 
 /* Comic Jens - a free font that we'll use until "In Space" is finished. Will probably use it for fallback if we're missing glyphs */
@@ -198,6 +202,7 @@ body.home .yis-header {
 
 body.webapp > .navbar-fixed-top {
 	padding-top: 20px;
+	padding-top: env(safe-area-inset-top);
 }
 
 /* Make the home link... nicer */
@@ -932,35 +937,9 @@ ul.blocklinks .promo-img {
             .footer-third:first-of-type {
                 margin-left: calc((100% - 1170px) / 2);
             }
-    }
-    /* Hide/rearrange for smaller screens */
-    @media screen and (max-width: 767px) {
-
-        /* Hide captions */
-        .carousel-caption {
-            display: none;
-        }
-
-        /* Move YIS Header down and hide inline nav. Shorten to 200px, and move under nav */
-        .yis-header {
-            top: 62px;
-            height: 200px;
-            z-index: initial;
-            /* Disable pointer events to avoid mis-tapping/clicking */
-            pointer-events: none;
-        }
-
-            .yis-header .navbar {
-                display: none;
-            }
-
-        /* Make the home/brand link the same height as the navbar
-       so it isn't awkwardly floating at the top */
-        .navbar-brand {
-            height: 62px;
-            margin-left: 5px;
-		}
-		
+	}
+	
+	@media screen and (max-width: 896px) {
 		#YIS-BioPane {
 			left: 0;
 			top: 0;
@@ -970,11 +949,16 @@ ul.blocklinks .promo-img {
 			box-shadow: none;
 			overflow-y: scroll;
 			pointer-events: all;
+			padding-bottom: env(safe-area-inset-bottom);
+			padding-left: max(15px, env(safe-area-inset-left));
+			padding-right: max(15px, env(safe-area-inset-right));
 		}
 
 		body.webapp #YIS-BioPane {
 			top: 20px;
+			top: env(safe-area-inset-top);
 			height: calc(100% - 20px);
+			height: calc(100% - env(safe-area-inset-top));
 		}
 
 		.yis-bioimg {
@@ -1001,5 +985,40 @@ ul.blocklinks .promo-img {
 
 		body.webapp .yis-close {
 			top: 25px;
+			top: calc(env(safe-area-inset-top) + 5px)
+		}
+	}
+
+    /* Hide/rearrange for smaller screens */
+    @media screen and (max-width: 767px) {
+
+        /* Hide captions */
+        .carousel-caption {
+            display: none;
+        }
+
+        /* Move YIS Header down and hide inline nav. Shorten to 200px, and move under nav */
+        .yis-header {
+			top: 62px;
+			top: calc(62px + env(safe-area-inset-top));
+            height: 200px;
+            z-index: initial;
+            /* Disable pointer events to avoid mis-tapping/clicking */
+            pointer-events: none;
+        }
+
+        .yis-header .navbar {
+            display: none;
+		}
+		
+		body.webapp footer {
+			padding-bottom: env(safe-area-inset-bottom);
+		}
+
+        /* Make the home/brand link the same height as the navbar
+       so it isn't awkwardly floating at the top */
+        .navbar-brand {
+            height: 62px;
+            margin-left: 5px;
 		}
     }
