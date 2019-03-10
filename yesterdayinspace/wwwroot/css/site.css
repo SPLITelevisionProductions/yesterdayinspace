@@ -851,18 +851,18 @@ ul.blocklinks .promo-img {
 	border-top-right-radius: 5px;
 }
 
-#Gallery {
+.gpSection {
     text-align: center;
 }
 
-#Gallery a {
+.gpSection a {
     height: 150px;
     width: auto;
     display: inline-block;
     margin: 5px;
 }
 
-#Gallery a img {
+.gpSection a img {
     height: 150px;
 	width: auto;
 	opacity: 0.8;
@@ -870,7 +870,7 @@ ul.blocklinks .promo-img {
 	transition: all .15s ease-in-out;
 }
 
-#Gallery a img:hover {
+.gpSection a img:hover {
 	opacity: 1;
 }
 

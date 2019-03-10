@@ -185,19 +185,76 @@ function getGallery(location) {
 
     $.getJSON(url, query)
         .done(function(json) {
-			var items = [];
+			var gpImages = [];
+			gpiTitle = "<h2>Images</h2>"
+			gpImages.push(gpiTitle);
+			var gpReviews = [];
+			gprTitle = "<h2>Reviews</h2>"
+			gpReviews.push(gprTitle);
+			var gpProducts = [];
+			gppTitle = "<h2>Products</h2>"
+			gpProducts.push(gppTitle);
+			var gpVideos = [];
+			gpvTitle = "<h2>Videos</h2>"
+			gpVideos.push(gpvTitle);
             $.each( json, function( key, val ) {
                 // Pull data from the JSON into shorter variables
                 var thumburl = json[key]["thumbURL"];
 				var url = json[key]["url"];
 				var caption = json[key]["caption"];
+				var type = json[key]["type"];
 
-				item = "<a href='" + url + "' data-fancybox='gallery' data-caption='" + caption + "' title='" + caption + "'>" +
+				switch (type) {
+					case 'image':
+						gpImage = "<a href='" + url + "' data-fancybox='images' data-caption='" + caption + "' title='" + caption + "'>" +
 						"<img src='" + thumburl + "' /></a>";
+						gpImages.push(gpImage);
+						break;
 
-				items.push(item);
+					case 'review':
+						gpReview = "<a href='" + url + "' data-fancybox='reviews' data-caption='" + caption + "' title='" + caption + "'>" +
+						"<img src='" + thumburl + "' /></a>";
+						gpReviews.push(gpReview);
+						break;
+
+					case 'product':
+						gpProduct = "<a href='" + url + "' data-fancybox='products' data-caption='" + caption + "' title='" + caption + "'>" +
+						"<img src='" + thumburl + "' /></a>";
+						gpProducts.push(gpProduct);
+						break;
+
+					case 'video':
+						gpVideo = "<a href='" + url + "' data-fancybox='videos' data-caption='" + caption + "' title='" + caption + "'>" +
+						"<img src='" + thumburl + "' /></a>";
+						gpVideos.push(gpVideo);
+						break;
+				
+					default:
+						break;
+				}
 			});
-			$('#Gallery').html(items.join( "" ));
+
+			// We only want to show the products and reviews after YIS is finished (21st March 2019)
+			var afterDate = "21 Mar 2019";
+			var afterDate = new Date(afterDate); // Convert our date to a date object
+			var today = new Date(); // Get today's date
+
+			$('#GPImages').html(gpImages.join( "" ));
+			if(afterDate <= today) {
+				console.log("Today is: " + today);
+				console.log("Aftershow date is: " + afterDate);
+				console.log("Resolution: After show");
+
+				$('#GPReviews').html(gpReviews.join( "" ));
+				$('#GPReviews').show();
+				$('#GPProducts').html(gpProducts.join( "" ));
+				$('#GPProducts').show();
+			} else {
+				console.log("Today is: " + today);
+				console.log("Aftershow date is: " + afterDate);
+				console.log("Resolution: Not after show");
+			}
+			$('#GPVideos').html(gpVideos.join( "" ));
 		})
 		.fail(function(json) {
 			console.log(json);
