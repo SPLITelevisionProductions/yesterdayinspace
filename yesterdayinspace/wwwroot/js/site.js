@@ -6,6 +6,11 @@
 const local = "/";
 const remote = "https://www.lga.nz:40443/services/STPYIS/remote/";
 
+// We only want to show the products, reviews, and music after YIS is finished (21st March 2019)
+const afterDateS = "21 Mar 2019";
+const afterDate = new Date(afterDateS); // Convert our date to a date object
+const today = new Date(); // Get today's date
+
 // Shamelessly taken from librarium-sqlite
 $(document).ready(function() {
 	// If we are launched standalone (i.e. in web-app mode), add
@@ -22,7 +27,22 @@ $(document).ready(function() {
         console.log(id);
         getEntity(id);
         $('#YIS-BioPane').fadeIn();
-    });
+	});
+
+	if(afterDate <= today) {
+		console.log("Today is: " + today);
+		console.log("Aftershow date is: " + afterDate);
+		console.log("Resolution: After show");
+
+		// Show Music in the navbar
+		$("ul.navbar-nav").append('<li><a href="/Music">Music</a></li>');
+		// Hide the Book Now button on the home page
+		$("body.home button.btn-primary").hide();
+	} else {
+		console.log("Today is: " + today);
+		console.log("Aftershow date is: " + afterDate);
+		console.log("Resolution: Not after show");
+	}
 });
 
 function getEntity(id) {
@@ -234,11 +254,6 @@ function getGallery(location) {
 				}
 			});
 
-			// We only want to show the products and reviews after YIS is finished (21st March 2019)
-			var afterDate = "21 Mar 2019";
-			var afterDate = new Date(afterDate); // Convert our date to a date object
-			var today = new Date(); // Get today's date
-
 			$('#GPImages').html(gpImages.join( "" ));
 			if(afterDate <= today) {
 				console.log("Today is: " + today);
@@ -260,5 +275,41 @@ function getGallery(location) {
 			console.log(json);
 			getGallery(local);
 			alert("Sorry, we're having problems connecting to the remote server for the latest Gallery data. Local data has been loaded instead");
+		});
+}
+
+function getMusic(location) {
+
+    var url = location + 'GetMusic';
+
+    var query = {};
+
+    $.getJSON(url, query)
+        .done(function(json) {
+			var items = [];
+            $.each( json, function( key, val ) {
+                // Pull data from the JSON into shorter variables
+                var ti = json[key]["title"];
+				var em = json[key]["embed"];
+				var bc = json[key]["bandURL"];
+				var sc = json[key]["soundURL"];
+				var nf = json[key]["info"];
+
+				item = "<div class='mpItem'>" +
+						"<h2>" + ti + "</h2>" +
+						"<iframe width='100%' height='166' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + em + "&color=%23420264&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'></iframe>" +
+						"<ul class='mpLinks'><li><a href='" + sc + "'>Listen on SoundCloud</a></li><li><a href='" + bc + "'>Listen on BandCamp</a></li></ul>" +
+						"<div class='mpInfo'>" + nf + "</div>" + 
+						"</div>";
+				items.push(item);
+						
+			});
+
+			$('#MPList').html(items.join( "" ));
+		})
+		.fail(function(json) {
+			console.log(json);
+			getMusic(local);
+			alert("Sorry, we're having problems connecting to the remote server for the latest Music data. Local data has been loaded instead");
 		});
 }
