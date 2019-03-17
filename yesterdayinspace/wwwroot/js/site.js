@@ -24,24 +24,15 @@ $(document).ready(function() {
     $(".yis-circlesect").on("click","li", function(event){
         event.preventDefault();
         var id = $(this).attr('data-id');
-        console.log(id);
         getEntity(id);
         $('#YIS-BioPane').fadeIn();
 	});
 
 	if(afterDate <= today) {
-		console.log("Today is: " + today);
-		console.log("Aftershow date is: " + afterDate);
-		console.log("Resolution: After show");
-
 		// Show Music in the navbar
 		$("ul.navbar-nav").append('<li><a href="/Music">Music</a></li>');
-		// Hide the Book Now button on the home page
-		$("body.home button.btn-primary").hide();
-	} else {
-		console.log("Today is: " + today);
-		console.log("Aftershow date is: " + afterDate);
-		console.log("Resolution: Not after show");
+		// Redirect the Book Now button on the home page
+		$("body.home button.btn-primary").attr("onclick","window.location='/ShipLaunched'");
 	}
 });
 
@@ -50,13 +41,11 @@ function getEntity(id) {
     var url = '/GetCC';
 
     var query = {id: id};
-    console.log(query);
     
     $.getJSON(url, query)
         .done(function(json) {
             $.each( json, function( key, val ) {
                 // Pull data from the JSON into shorter variables
-                console.log("Got item listing ->"); console.log(json);
                 var name = json["name"];
 				var role = json["role"];
 				var altrole = json["altRole"];
@@ -78,7 +67,6 @@ function getEntity(id) {
 				var s5t = json["social5Type"];
 				var s5u = json["social5URL"];
 				var s5d = json["social5Display"];
-                console.log(name);
 
                 fn = "<b>" + name + "</b>";
 
@@ -174,13 +162,11 @@ function listCC() {
         .done(function(json) {
             $.each( json, function( key, val ) {
                 // Pull data from the JSON into shorter variables
-                console.log("Got item listing ->"); console.log(json);
                 var name = json[key]["name"];
 				var role = json[key]["role"];
 				var altrole = json[key]["altrole"];
                 var img = json[key]["bioimg"];
                 var bio = json[key]["bio"];
-                console.log(name);
 
                 fn = "<b>" + name + "</b>";
 
@@ -256,23 +242,14 @@ function getGallery(location) {
 
 			$('#GPImages').html(gpImages.join( "" ));
 			if(afterDate <= today) {
-				console.log("Today is: " + today);
-				console.log("Aftershow date is: " + afterDate);
-				console.log("Resolution: After show");
-
 				$('#GPReviews').html(gpReviews.join( "" ));
 				$('#GPReviews').show();
 				$('#GPProducts').html(gpProducts.join( "" ));
 				$('#GPProducts').show();
-			} else {
-				console.log("Today is: " + today);
-				console.log("Aftershow date is: " + afterDate);
-				console.log("Resolution: Not after show");
 			}
 			$('#GPVideos').html(gpVideos.join( "" ));
 		})
 		.fail(function(json) {
-			console.log(json);
 			getGallery(local);
 			alert("Sorry, we're having problems connecting to the remote server for the latest Gallery data. Local data has been loaded instead");
 		});
@@ -308,7 +285,6 @@ function getMusic(location) {
 			$('#MPList').html(items.join( "" ));
 		})
 		.fail(function(json) {
-			console.log(json);
 			getMusic(local);
 			alert("Sorry, we're having problems connecting to the remote server for the latest Music data. Local data has been loaded instead");
 		});

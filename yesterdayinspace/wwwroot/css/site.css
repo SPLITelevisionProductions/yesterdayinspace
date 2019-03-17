@@ -1015,6 +1015,27 @@ ul.blocklinks .promo-img {
 			padding-bottom: env(safe-area-inset-bottom);
 		}
 
+		.yis-charsect li {
+			text-align: center;
+		}
+
+		.yis-charsect .yis-profile {
+			float: initial !important;
+		}
+
+		.yis-charsect .yis-charbio {
+			float: initial !important;
+			width: 100%;
+		}
+
+		.yis-charsect .yis-name span {
+			display: block;
+		}
+
+		.yis-charsect .yis-bio {
+			text-align: justify;
+		}
+
         /* Make the home/brand link the same height as the navbar
        so it isn't awkwardly floating at the top */
         .navbar-brand {
